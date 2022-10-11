@@ -2,6 +2,23 @@
 /**/
 /**/
 
+.vert-nav-bar {
+  background-color: #ffe0aa;
+}
+
+.nav-bar-logo {
+  width: 50px;
+  margin: 20px;
+}
+
+.hori-nav-bar {
+  background-color: #f6a61d;
+}
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
