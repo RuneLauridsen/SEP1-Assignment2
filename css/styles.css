@@ -292,7 +292,7 @@ a:hover {
 }
 
 .Event {
-  background-image: url(images/boardgame_pieces.jpeg);
+  background-image: url(../images/boardgame_pieces.jpeg);
   background-size: cover;
   overflow-y: scroll;
   height: 90vh;
@@ -312,7 +312,7 @@ th {
 }
 
 tr :nth-child(even) {
-  background-color: lightblue;
+  background-color: white;
 }
 
 #facebook {
