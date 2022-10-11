@@ -1,23 +1,29 @@
-/* Styling for the board game pages [START], Author: Sebastian Cedbak Bak */
-/**/
-/**/
+/* Style for vertical and horizontal navbar: Rune Lauridsen */
 
-.vert-nav-bar {
+#vert-navbar-container {
   background-color: #ffe0aa;
 }
 
-.nav-bar-logo {
+#vert-navbar-sub {
+  font-size: 0.9em;
+}
+
+#hori-navbar {
+  background-color: #f6a61d;
+}
+
+#hori-navbar-logo {
   width: 50px;
   margin: 20px;
 }
 
-.hori-nav-bar {
-  background-color: #f6a61d;
-}
 
 
 
 
+/* Styling for the board game pages [START], Author: Sebastian Cedbak Bak */
+/**/
+/**/
 
 * {
   margin: 0;
