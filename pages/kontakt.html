@@ -2,119 +2,160 @@
   Author: Omar
   Description: This is the contact information page
 -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/b.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Kontakt - VIA Board Game Group</title>
+    <meta charset="UTF-8">
+    <title>VIA Board Game Group</title>
     <link rel="icon" type="image/png" href="../images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    <script src="../js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div>
-      <!-- This is the horizontal navigation bar at the top of the page -->
-      <div id="horiNavBar">
-        <img id="horiNavBarLogo" src="../images/icon.png" alt="Logo">
-        <h1 id="horiNavBarTitle">VIA Board Game Group</h1>
-        <div id="horiNavBarSearchCon">
-          <img id="horiNavBarSearchIcon" src="../images/search.png"
-            alt="Search
-            Icon">
+    <div class="container-fluid">
+      <div class="row" id="hori-navbar">
+        <div class="col-12 d-flex flex-row align-items-center">
+          <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board
+            Game Group Logo">
+          <h3>VIA Board Game Group</h3>
         </div>
       </div>
+      <div class="row">
+        <!-- In md view, the #vert-navbar is positioned in column 1-2, as a vertical navbar.  
+             In <=sm view, the #vert-navbar is collapsed into a hamburger menu. -->
+        <div class="col-md-2 p-0" id="vert-navbar-container">
+          <nav class="navbar navbar-expand-md">
+            <!-- In md view, we set flex-column, since menu items 
+              should be stacked vertically in vertical navbar -->
+            <div class="container-fluid flex-md-column align-items-md-start
+              ms-2">
+              <p class="navbar-brand mb-md-0">Menu</p>
+              <button class="navbar-toggler" type="button">
+                data-bs-toggle="collapse" data-bs-target="#vert-navbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="vert-navbar">
+                <ul class="navbar-nav flex-md-column">
+                  <li><a class="nav-link" href="index.html">Forside</a></li>
+                  <li>
+                    <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
+                    <a class="nav-link" href="#vert-navbar-sub"
+                      data-bs-toggle="collapse">Brætspil</a>
+                    <ul class="collapse navbar-nav flex-column ms-md-2"
+                      id="vert-navbar-sub">
+                      <li><a href="braetspil.html" class="nav-link">Alle</a></li>
+                      <li><a href="familiespil.html" class="nav-link">Familie</a></li>
+                      <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
+                      <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
+                      <li><a href="triviaspil.html" class="nav-link">Trivia</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link" href="events.html">Events</a></li>
+                  <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
 
-      <!-- This is the vertical navigation bar at the left side of the page -->
-      <div id="vertNavBar">
-        <ul id="vertNavBarList">
-          <li class="vertNavBarHeader"><a href="index.html">Forside</a></li>
-          <li class="vertNavBarHeader">
-            <a href="braetspil.html">Brætspil</a>
-            <ul class="vertNavBarSubList">
-              <li><a href="Familiespil.html">Familiespil</a></li>
-              <li><a href="strategispil.html">Strategispil</a></li>
-              <li><a href="kortspil.html">Kortspil</a></li>
-              <li><a href="triviaspil.html">Triviaspil</a></li>
-            </ul>
-          </li>
-          <li class="vertNavBarHeader"><a href="Events.html">Events</a></li>
-          <li class="vertNavBarHeader"><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
-      <!-- Main content -->
-      <div id="mainCon">
-        <h2>Kontakt</h2><br>
-        <div id="info">
-          <pre>Kontakt os, hvis du har spørgsmål eller brug for hjælp.</pre>
-          <hr>
-          <p>Ring til os eller send en e-mail:</p>
-          <hr>
-          <p><a href="mailto:313599@via.dk">Send os en e-mail</a></p>
-          <p> Eller ring på : <a href="tel:+457168189">71 68 18 90</a></p>
-        </div>
-        <div id="Persons">
-          <div id="Oumar">
-            <p><img class="kontakt_oumar"
-                src="../images/kontakt/Omar.png" alt="Picture of
-                Oumar" title="Oumar"
-                style="width:100px;height:108px;">
-            </p>
-            <div>
-              <p> Navn : Oumar Ammar</p>
-              <p> Role : </p>
-              <p> ynglins brætspil: Monopoly </p>
-              <p> Mail <a href="mailto:313599@via.dk">313599@via.dk</a>
-              </p>
-              <br>
+        <div class="col">
+          <div class="container">
+            <div class="row">
+              <div class="container">
+                <h1>KONTAKT</h1>
+                <div id="info">
+                  <p class="lead"> Kontakt os, hvis du har spørgsmål eller brug
+                    for hjælp.</p>
+                  <hr>
+                  <p class="lead">Ring til os eller send en e-mail:</p>
+                  <hr>
+                  <p class="lead"> <a href="mailto:313599@via.dk">Send os en
+                      e-mail </a></p>
+                  <p class="lead"> Eller ring på : <a href="tel:+457168189">71
+                      68 18 90</a></p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <img src="../images/kontakt/Omar.png" alt="Oumar ">
+              </div>
+              <div class="col-md-2">
+                Navn : Oumar Ammar
+              </div>
+
+              <div class="col-md-2">
+                Role: Webudvikler
+              </div>
+              <div class="col-md-2">
+                ynglins brætspil: Monopoly
+              </div>
+              <div class="col-md-2">
+                <p> Mail <a href="mailto:313599@via.dk">313599@via.dk</a>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-2">
+                  <img src="../images/kontakt/Rune.png" alt="Rune ">
+                </div>
+                <div class="col-md-2">
+                  Navn : Rune Lauridsen
+                </div>
+                <div class="col-md-2">
+                  Role: Webudvikler
+                </div>
+                <div class="col-md-2">
+                  ynglins brætspil: Risk
+                </div>
+                <div class="col-md-2">
+                  <p> Mail <a href="mailto:331689@via.dk">331689@via.dk</a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="../images/kontakt/Bak.png" alt="Sebastian ">
+                  </div>
+                  <div class="col-md-2">
+                    Navn : Sebastian Cedbak Bak
+                  </div>
+                  <div class="col-md-2">
+                    Role: Webudvikler
+                  </div>
+                  <div class="col-md-2">
+                    ynglins brætspil: Skak
+                  </div>
+                  <div class="col-md-2">
+                    <p> Mail <a href="mailto:331851@via.dk">331851@via.dk</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img src="../images/kontakt/Simone.png" alt="Simone ">
+                    </div>
+                    <div class="col-md-2">
+                      Navn : Simone Storm Bøgh Kristensen
+                    </div>
+
+                    <div class="col-md-2">
+                      Role: Webudvikler
+                    </div>
+                    <div class="col-md-2">
+                      ynglins brætspil: Partners
+                    </div>
+                    <div class="col-md-2">
+                      <p> Mail <a href="mailto:318394@via.dk">318394@via.dk</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="Bak">
-            <img class="kontakt_Bak"
-              src="../images/kontakt/Bak.png"
-              alt="Picture of Bak" title="Bak"
-              style="width:100px;height:108px;">
-            <div>
-              <p> Navn : Sebastian Cedbak Bak</p>
-              <p> Role : Webudvikler</p>
-              <p> Ynglins brætspil: Skak</p>
-              <p> Mail <a href="mailto:331851@via.dk">331851@via.dk</a>
-              </p>
-              <br>
-            </div>
-          </div>
-          <div id="Rune">
-            <p>
-              <img class="kontakt_Rune"
-                src="../images/kontakt/Rune.png"
-                alt="Picture of Rune" title="Rune"
-                style="width:100px;height:108px;">
-            </p>
-            <div>
-              <p> Navn : Rune Lauridsen</p>
-              <p> Role : </p>
-              <p> Ynglins brætspil: Risk</p>
-              <p> Mail <a href="mailto:331689@via.dk">331689@via.dk</a>
-              </p>
-              <br>
-            </div>
-          </div>
-          <div id="Simone">
-            <p>
-              <img class="kontakt_Simone"
-                src="../images/kontakt/Simone.png"
-                alt="Picture of Simone" title="Simone"
-                style="width:100px;height:108px;">
-            </p>
-            <p> Navn : Simone Storm Bøgh Kristensen</p>
-            <p> Role : Webudvikler </p>
-            <p> Ynglins brætspil: Partners </p>
-            <p> Mail <a href="mailto:318394@via.dk">318394@via.dk</a>
-            </p>
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+
+
+
+
+          </body>
+        </html>
