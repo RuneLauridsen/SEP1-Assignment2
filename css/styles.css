@@ -1,4 +1,6 @@
-/* Style for vertical and horizontal navbar: Rune Lauridsen */
+/* 
+ * Styles for vertical and horizontal navbar 
+ */
 
 #vert-navbar-container {
   background-color: #ffe0aa;
@@ -17,6 +19,48 @@
   margin: 20px;
 }
 
+/*
+ * Styles for boardgame cards.
+ */
+
+.card {
+  /* Normally Boostrap auto-sizes card width to fill their container, however we want cards to be a constant width. */
+  width: 20rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.card-img-top {
+  /* Make sure all boardgame images take up the same space, regardless of their aspect ration.
+  This will stretch some images, but keeps the boardgame cards at a constant height. */
+  height: 14rem;
+}
+
+.card-img-players {
+  /* Uses em units, so icon scales with text */
+  height: 1.5em;
+  margin-bottom: 0.1em;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  /* Remove margin, to make paragraphs more compact inside boardgame cards*/
+  margin: 0px;
+}
+
+.card-text-players {
+  display: inline;
+}
+
+
+.card-text-status {
+  font-style: italic;
+  font-size: 0.8em;
+}
 
 
 
