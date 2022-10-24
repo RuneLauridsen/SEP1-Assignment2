@@ -370,3 +370,18 @@ tr :nth-child(even) {
 }
 
 /* Styling for event page (event.html) ends here */
+
+/* Styling for kontakt page (kontakt.html) starts here */
+
+body {
+  background-color: white;
+}
+
+#info {
+  color: black;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12px;
+}
+/* Styling for kontakt page (kontakt.html) ends here */
+
