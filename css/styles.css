@@ -344,8 +344,6 @@ a:hover {
 .Event {
   background-image: url(../images/boardgame_pieces.jpeg);
   background-size: cover;
-  overflow-y: scroll;
-  height: 90vh;
 }
 
 .Event h1 {
@@ -363,10 +361,6 @@ th {
 
 tr :nth-child(even) {
   background-color: white;
-}
-
-#facebook {
-  margin-left: 500px;
 }
 
 /* Styling for event page (event.html) ends here */
