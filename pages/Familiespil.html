@@ -2,262 +2,252 @@
   Author: Sebastian Cedbak Bak
   Description: This is a page that contains the family board games of the website
 -->
-
 <!DOCTYPE html>
 <html lang="da">
   <head>
     <!-- Defines charset to use -->
     <meta charset="utf-8">
 
-    <!-- Imports CSS styling -->
-    <link rel="stylesheet" href="../styles.css">
-
     <!-- Sets the title of this page -->
     <title>Familiespil - VIA Board Game Group</title>
 
+    <!-- Imports CSS styling -->
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+
     <!-- Sets the favicon of this page -->
     <link rel="icon" type="image/png" href="../images/icon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!-- Imports CSS styling -->
+    <script src="../js/bootstrap.min.js"></script>
   </head>
 
   <body>
     <div>
-
-      <!-- This is the horizontal navigation bar at the top of the page -->
-      <div id="horiNavBar">
-
-        <!-- Our logo and website name -->
-        <img id="horiNavBarLogo" src="../images/icon.png" alt="Logo">
-        <h1 id="horiNavBarTitle">VIA Board Game Group</h1>
-
-        <!-- This is our search field -->
-        <div id="horiNavBarSearchCon">
-          <img
-            id="horiNavBarSearchIcon"
-            src="../images/search.png"
-            alt="Search
-            Icon">
-        </div>
-      </div>
-
-      <!-- This is the vertical navigation bar at the left side of the page -->
-      <div id="vertNavBar">
-        <!-- This unordered list contains links to all the different pages of our website -->
-        <ul id="vertNavBarList">
-          <li class="vertNavBarHeader"><a href="index.html">Forside</a></li>
-          <li class="vertNavBarHeader">
-            <a href="braetspil.html">Brætspil</a>
-            <ul class="vertNavBarSubList">
-              <li><a href="familiespil.html">Familiespil</a></li>
-              <li><a href="strategispil.html">Strategispil</a></li>
-              <li><a href="kortspil.html">Kortspil</a></li>
-              <li><a href="triviaspil.html">Triviaspil</a></li>
-            </ul>
-          </li>
-          <li class="vertNavBarHeader"><a href="events.html">Events</a></li>
-          <li class="vertNavBarHeader"><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
-
-      <!-- Main content -->
-      <div id="mainCon">
-
-        <!-- The title of the page -->
-        <h2 class="pageHeader">Familiespil</h2>
-        <div class="smallDivider"></div>
-
-        <!-- Filter options -->
-        <div id="filterCon">
-
-          <!-- Drop down menu of game types -->
-          <div class="dropDownMenu">
-            <label>Kategorier</label>
-            <select name="kategorier">
-              <option value="allespil">Alle spil</option>
-              <option value="familiespil" selected="selected">
-                Familiespil
-              </option>
-              <option value="strategispil">Strategispil</option>
-              <option value="kortspil">Kortspil</option>
-              <option value="triviaspil">Triviaspil</option>
-            </select>
-          </div>
-
-          <!-- Drop down menu that selects number of players, for a given game -->
-          <div class="dropDownMenu">
-            <label>Antal spillere</label>
-            <select name="antal_spillere">
-              <option value="2-4">1 - 4</option>
-              <option value="4-8">4 - 8</option>
-              <option value="8-16">8 - 16</option>
-              <option value="16+">16+</option>
-            </select>
+      <div class="container-fluid">
+        <div class="row" id="hori-navbar">
+          <div class="col-12 d-flex flex-row align-items-center">
+            <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board
+              Game Group Logo">
+            <h3>VIA Board Game Group</h3>
           </div>
         </div>
+        <div class="row">
+          <!-- In >=md view, the #vert-navbar is positioned in column 1-2, as a vertical navbar.  
+               In <=sm view, the #vert-navbar is collapsed into a hamburger menu. -->
+          <div class="col-md-2 p-0" id="vert-navbar-container">
+            <nav class="navbar navbar-expand-md">
+              <!-- In md view, we set flex-column, since menu items 
+                should be stacked vertically in vertical navbar -->
+              <div class="container-fluid flex-md-column align-items-md-start
+                ms-2">
+                <p class="navbar-brand mb-md-0">Menu</p>
+                <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#vert-navbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="vert-navbar">
+                  <ul class="navbar-nav flex-md-column">
+                    <li><a class="nav-link" href="index.html">Forside</a></li>
+                    <li>
+                      <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
+                      <a class="nav-link" href="#vert-navbar-sub"
+                        data-bs-toggle="collapse">Brætspil</a>
+                      <ul class="collapse navbar-nav flex-column ms-md-2"
+                        id="vert-navbar-sub">
+                        <li><a href="braetspil.html" class="nav-link">Alle</a></li>
+                        <li><a href="familiespil.html" class="nav-link">Familie</a></li>
+                        <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
+                        <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
+                        <li><a href="triviaspil.html" class="nav-link">Trivia</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col">
+            <div class="container-fluid p-5" id="content-container">
+              <div class="row">
+                <div class="col-auto">
+                  <!-- Underline header -->
+                  <div class="border-bottom border-2 border-dark mb-2">
+                    <h2>Kortspil</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-auto">
+                  <p>
+                    Når hele familien skal samles er der intet som et godt
+                    familiespil.
+                    Familiespil er spil som hele familien kan spille med på,
+                    både store og
+                    små, hvilket gør familiespil til en helt speciel kategori.
+                  </p>
+                </div>
+              </div>
 
-        <!-- Category description -->
-        <p id="kategoriBeskrivelse">
-          Når hele familien skal samles er der intet som et godt familiespil.
-          Familiespil er spil som hele familien kan spille med på, både store og
-          små, hvilket gør familiespil til en helt speciel kategori.
-        </p>
+              <!-- Drop down menu that selects number of players, for a given game -->
+              <div class="dropDownMenu">
+                <label>Antal spillere</label>
+                <select name="antal_spillere">
+                  <option value="2-4">1 - 4</option>
+                  <option value="4-8">4 - 8</option>
+                  <option value="8-16">8 - 16</option>
+                  <option value="16+">16+</option>
+                </select>
+              </div>
+            </div>
 
-        <!-- The board games 
+            <!-- The board games 
         This div contains all the game "cards". Each card contains an image,
         game name, number of players, game owner, and possible lent to and lent date.
         -->
-        <div id="boardGamesCon">
+            <div id="boardGamesCon">
 
-          <!-- New Ludo -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/newLudo.jpg" alt="New
-              Ludo">
-            <p class="boardGameCardTitle">New Ludo</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 6</p>
-            </div>
-            <p class="boardGameCardText gameOwnerText">
-              Game owner: Mathias Berg
-            </p>
-            <p class="boardGameCardText">Lånt til Bob Hansen d. 24.8.2022</p>
-          </div>
+              <!-- New Ludo -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/newLudo.jpg"
+                  alt="New Ludo">
+                <div class="card-body">
+                  <h5 class="card-title">New Ludo</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2 - 6</p>
+                  <p class="card-text">Ejer: Mathias Berg</p>
+                  <p class="card-text card-text-status">Udlånt til: Bob Hansen
+                    24.8.2022</p>
+                </div>
+              </div>
 
-          <!-- Uno -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage" src="../images/brætspil/uno.jpg"
-              alt="Uno">
-            <p class="boardGameCardTitle">Uno</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 10</p>
-            </div>
-            <p class="boardGameCardText">Game owner: Louise Kelpak</p>
-            <div class="boardGameCardButton">Lån</div>
-          </div>
+              <!-- Uno -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/uno.jpg"
+                  alt="Uno">
+                <div class="card-body">
+                  <h5 class="card-title">Uno</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2 - 10</p>
+                  <p class="card-text">Ejer: Louise Kelpak</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
+              </div>
 
-          <!-- Monopoly -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/monopoly.jpg" alt="Uno">
-            <p class="boardGameCardTitle">Monopoly</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 6</p>
-            </div>
-            <p class="boardGameCardText">Game owner: Søren Hedegaard</p>
-            <div class="boardGameCardButton">Lån</div>
-          </div>
+              <!-- Monopoly -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/monopoly.jpg"
+                  alt="Monopoly">
+                <div class="card-body">
+                  <h5 class="card-title">Monopoly</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2 - 6</p>
+                  <p class="card-text">Ejer: Søren Hedegaard</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
+              </div>
 
-          <!-- Cranium -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/cranium.jpg" alt="Cranium">
-            <p class="boardGameCardTitle">Cranium</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 6</p>
-            </div>
-            <p class="boardGameCardText gameOwnerText">
-              Game owner: Rasmus Berg
-            </p>
-            <p class="boardGameCardText">
-              Lånt til Solvej Nielsen d. 24.8.2022
-            </p>
-          </div>
+              <!-- Cranium -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/cranium.jpg"
+                  alt="Cranium">
+                <div class="card-body">
+                  <h5 class="card-title">Cranium</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2- 6</p>
+                  <p class="card-text">Ejer: Rasmus Berg</p>
+                  <p class="card-text card-text-status">Udlånt til: Solvej
+                    Nielsen
+                    24.8.2022</p>
+                </div>
+              </div>
 
-          <!-- Vildkatten -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/vilkatten.jpg" alt="Vildkatten">
-            <p class="boardGameCardTitle">Vildkatten</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 10</p>
-            </div>
-            <p class="boardGameCardText gameOwnerText">
-              Game owner: Rasmus Berg
-            </p>
-            <p class="boardGameCardText">
-              Lånt til Solvej Nielsen d. 24.8.2022
-            </p>
-          </div>
+              <!-- Vildkatten -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/vilkatten.jpg"
+                  alt="Vildkatten">
+                <div class="card-body">
+                  <h5 class="card-title">Vildkatten</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2- 10</p>
+                  <p class="card-text">Ejer: Rasmus Berg</p>
+                  <p class="card-text card-text-status">Udlånt til: Solvej
+                    Nielsen
+                    24.8.2022</p>
+                </div>
+              </div>
 
-          <!-- Klodsmajor -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/klodsmajor.jpg" alt="Klodsmajor">
-            <p class="boardGameCardTitle">Klodsmajor</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 10</p>
-            </div>
-            <p class="boardGameCardText">Game owner: Rikke Damgaard</p>
-            <div class="boardGameCardButton">Lån</div>
-          </div>
+              <!-- Klodsmajor -->
+              <div class="card">
+                <img class="card-img-top"
+                  src="../images/brætspil/klodsmajor.jpg"
+                  alt="Klodsmajor">
+                <div class="card-body">
+                  <h5 class="card-title">Klodsmajor</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2- 10</p>
+                  <p class="card-text">Ejer: Rikke Damgaard</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
+              </div>
 
-          <!-- Spejlæg -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/Spejlæg.jpg" alt="Spejlæg">
-            <p class="boardGameCardTitle">Spejlæg</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 4</p>
-            </div>
-            <p class="boardGameCardText">Game owner: Ole Knudsen</p>
-            <div class="boardGameCardButton">Lån</div>
-          </div>
+              <!-- Spejlæg -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/Spejlæg.jpg"
+                  alt="Spejlæg">
+                <div class="card-body">
+                  <h5 class="card-title">Spejlæg</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2 - 4</p>
+                  <p class="card-text">Ejer: Ole Knudsen</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
+              </div>
 
-          <!-- Hint -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage" src="../images/brætspil/hint.jpg"
-              alt="Hint">
-            <p class="boardGameCardTitle">Hint</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 6</p>
-            </div>
-            <p class="boardGameCardText">Game owner: Maibrit Løkke</p>
-            <div class="boardGameCardButton">Lån</div>
-          </div>
+              <!-- Hint -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/hint.jpg"
+                  alt="Hint">
+                <div class="card-body">
+                  <h5 class="card-title">Hint</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People icon">
+                  <p class="card-text card-text-players">2 - 6</p>
+                  <p class="card-text">Game owner: Maibrit Løkke</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
+              </div>
 
-          <!-- Labyrinth -->
-          <div class="boardGameCard">
-            <div class="boardGameCardBottom"></div>
-            <img class="boardGameCardImage"
-              src="../images/brætspil/labyrinth.jpg" alt="Labyrinth">
-            <p class="boardGameCardTitle">Labyrinth</p>
-            <div class="boardGameCardPlayersCon">
-              <img class="boardGameCardPlayersImg" src="../images/people.png"
-                alt="boardGameCardPlayersImg">
-              <p class="boardGameCardText">2 - 4</p>
+              <!-- Labyrinth -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/labyrinth.jpg"
+                  alt="Labyrinth">
+                <div class="card-body">
+                  <h5 class="card-title">Labyrinth</h5>
+                  <img class="card-img-players"
+                    src="../images/people.png" alt="Labyrinth">
+                  <p class="card-text card-text-players">2 - 4</p>
+                  <p class="card-text">Game owner: Rasmus Berg</p>
+                  <p class="card-text card-text-status">Lånt til Charlotte d.
+                    24.8.2022</p>
+                </div>
+              </div>
             </div>
-            <p class="boardGameCardText gameOwnerText">
-              Game owner: Rasmus Berg
-            </p>
-            <p class="boardGameCardText">Lånt til Charlotte d. 24.8.2022</p>
+
+            <!-- Some extra space in the bottom of the page -->
+            <div class="bottomSpace"></div>
           </div>
         </div>
-
-        <!-- Some extra space in the bottom of the page -->
-        <div class="bottomSpace"></div>
       </div>
     </div>
   </body>
