@@ -25,7 +25,7 @@
 
 .card {
   /* Normally Boostrap auto-sizes card width to fill their container, however we want cards to be a constant width. */
-  width: 20rem;
+  width: 18rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   display: inline-block;
@@ -383,5 +383,5 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 12px;
 }
-/* Styling for kontakt page (kontakt.html) ends here */
 
+/* Styling for kontakt page (kontakt.html) ends here */
