@@ -1,9 +1,10 @@
+<!DOCTYPE html>
+
 <!--
-  Audiv or: Simone
+  Author: Simone, Omar, Sebastian Cedbak Bak, Rune
   Description: div is is a page div at contains all div e board game events of div e website
 -->
 
-<!DOCTYPE html>
 <html lang="da">
   <head>
     <meta charset="UTF-8">
@@ -16,10 +17,7 @@
     <script src="../js/bootstrap.min.js"></script>
 
     <style>
-      .col-md-3
-      {
-        border: 2px solid black;
-      }
+      
 
         
       .row:nth-child(odd) {
@@ -31,6 +29,8 @@
       }
       
       /* 720px = bootstrap md */
+      /* It is simpler to write this media query, 
+        than adding many "border-md" and "bg-md" classes */
       @media only screen and (min-width: 720px) {
         .row:nth-child(even) .col-md-3:nth-child(even)  {
           background: grey;
@@ -39,12 +39,16 @@
         .row:nth-child(odd) .col-md-3:nth-child(even) {
           background: white;
         }
+
+        .col-md-3
+        {
+          border: 2px solid black;
+        }
       }
 
       form * {
         width: 100%;
       }
-
 
       input[type="submit"] {
         margin-top: 10px;
