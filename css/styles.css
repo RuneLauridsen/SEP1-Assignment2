@@ -288,14 +288,14 @@ a:hover {
   margin-right: auto;
 }
 
-#tabel1 {
+/* #tabel1 {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 50%;
   right: 10px;
   left: 50%;
   margin-bottom: 3vh;
-}
+} */
 
 .Event {
   background-image: url(../images/boardgame_pieces.jpeg);

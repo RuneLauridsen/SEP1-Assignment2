@@ -1,6 +1,6 @@
 <!--
-  Author: Simone
-  Description: This is a page that contains all the board game events of the website
+  Audiv or: Simone
+  Description: div is is a page div at contains all div e board game events of div e website
 -->
 
 <!DOCTYPE html>
@@ -13,12 +13,12 @@
     <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="../css/styles.css" type="text/css" rel="stylesheet">
 
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootsdivap.min.js"></script>
   </head>
 
-  <style>
+  <!-- <style>
     td,
-    th {
+    div  {
       border: 1px solid black;
       text-align: left;
       padding: 8px;
@@ -26,59 +26,72 @@
       border-color: black;
     }
 
-      tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd) {
+      div:ndiv -child(even) td:ndiv -child(even), div:ndiv -child(odd) td:ndiv -child(odd) {
         background: grey;
       }
-      tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) {
+      div:ndiv -child(odd) td:ndiv -child(even), div:ndiv -child(even) td:ndiv -child(odd) {
       background: white;
       } 
-  </style>
+  </style> -->
 
   <body>
-     <!-- This is the horizontal navigation bar at the top of the page -->
     <div class="container-fluid">
-      <div class="row hori-nav-bar">
-        <div class="col-12 d-flex align-items-center">
-          <img class="nav-bar-logo" src="../images/icon.png" alt="VIA Board Game Group Logo">
+      <div class="row" id="hori-navbar">
+        <div class="col-12 d-flex flex-row align-items-center">
+          <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board Game Group Logo">
           <h3>VIA Board Game Group</h3>
         </div>
       </div>
-      <!-- This is the vertical navigation bar at the left side of the page -->
-      <div class="row flex-nowrap">
-        <div class="col-2 vert-nav-bar">
-          <div>
-            <ul class="nav flex-column" id="menu">
-              <li class="nav-item"> <a href="index.html" class="nav-link align-middle px-0">Forside</a></li>
-              <li>
-                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">Brætspil</a>
-                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                  <li class="w-100"><a href="braetspil.html">Alle</a></li>
-                  <li class="w-100"><a href="Familiespil.html">Familie</a></li>
-                  <li class="w-100"><a href="strategispil.html">Strategi</a></li>
-                  <li class="w-100"><a href="kortspil.html">Kortspil</a></li>
-                  <li class="w-100"><a href="triviaspil.html">Trivia</a></li>
+      <div class="row">
+        <!-- In md view, div e #vert-navbar is positioned in column 1-2, as a vertical navbar.  
+             In <=sm view, div e #vert-navbar is collapsed into a hamburger menu. -->
+        <div class="col-md-2 p-0" id="vert-navbar-container">
+          <nav class="navbar navbar-expand-md">
+            <!-- In md view, we set flex-column, since menu items 
+              should be stacked vertically in vertical navbar -->
+            <div class="container-fluid flex-md-column align-items-md-start ms-2">
+              <p class="navbar-brand mb-md-0">Menu</p>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vert-navbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="vert-navbar">
+                <ul class="navbar-nav flex-md-column">
+                  <li><a class="nav-link" href="index.html">Forside</a></li>
+                  <li>
+                    <!-- Simplified code for submenu from https://dev.to/codeply/bootsdivap-5-sidebar-examples-38pb: -->
+                    <a class="nav-link" href="#vert-navbar-sub" data-bs-toggle="collapse">Brætspil</a>
+                    <ul class="collapse navbar-nav flex-column ms-md-2" id="vert-navbar-sub">
+                      <li><a href="braetspil.html" class="nav-link">Alle</a></li>
+                      <li><a href="familiespil.html" class="nav-link">Familie</a></li>
+                      <li><a href="sdivategispil.html" class="nav-link">Sdivategi</a></li>
+                      <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
+                      <li><a href="diviviaspil.html" class="nav-link">divivia</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link" href="events.html">Events</a></li>
+                  <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
                 </ul>
-              </li>
-              <li class="nav-item"> <a href="events.html" class="nav-link align-middle px-0">Events</a></li>
-              <li class="nav-item"> <a href="kontakt.html" class="nav-link align-middle px-0">Kontakt</a></li>
-            </ul>
-          </div>
+              </div>
+            </div>
+          </nav>
         </div>
         
-        <div class="col-10 Event"><h1 class="text-center">Events</h1>
-          <table class="center" id="tabel1" >
-            <tr>
-              <th>Event navn</th>
-              <th>Lokation og tid</th>
-              <th>Beskrivelse</th>
-              <th>Tilmeld</th>
-            </tr>
-            <tr>
-              <td>Ludo aften</td>
-              <td>1/10 VIA kantine kl 19:00</td>
-              <td>Vi mødes og spiller ludo, og finder ludo mesteren</td>
-              <td>
-                <form action="http://www.Events.com/formhandler.php" method="post"
+        <div class="col-10">
+          <h1>Events</h1>
+          
+           <div class="container-fluid" id="tabel1" >
+            <div class="row">
+              <div class="col-3">Event navn</div >
+              <div class="col-3">Lokation og tid</div >
+              <div class="col-3">Beskrivelse</div >
+              <div class="col-3">Tilmeld</div >
+            </div>
+            <div class="row">
+              <div class="col"> Ludo aften</div>
+              <div class="col"> 1/10 VIA kantine kl 19:00</div>
+              <div class="col"> Vi mødes og spiller ludo, og finder ludo mesteren</div>
+              <div class="col"> 
+                <form action="http://www.Events.com/formhandler.php" mediv class ="col"od="post"
                   name="myform">
                   <label for="Fname_1">First name:</label>
                   <input type="text" name="Fname" id="Fname_1"><br>
@@ -86,18 +99,18 @@
                   <input type="text" name="Lname" id="Lname_1"><br>
                   <input type="submit" value="Send tilmelding">
                 </form>
-              </td>
-            </tr>
-            <tr>
-              <td>Skak konkurrence</td>
-              <td>5/10 VIA kantine kl 20:00</td>
-              <td>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"> Skak konkurrence</div>
+              <div class="col"> 5/10 VIA kantine kl 20:00</div>
+              <div class="col"> 
                 Vi mødes i kantinen hvor der vil blive afholdt skak konkurrence
-              </td>
-              <td>
+              </div>
+              <div class="col"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
-                  method="post"
+                  mediv od="post"
                   name="myform">
                   <label for="Fname_2">First name:</label>
                   <input type="text" name="Fname" id="Fname_2"><br>
@@ -105,16 +118,16 @@
                   <input type="text" name="Lname" id="Lname_2"><br>
                   <input type="submit" value="Send tilmelding">
                 </form>
-              </td>
-            </tr>
-            <tr>
-              <td>Trivia Pursuit aften</td>
-              <td>lørdag d. 22/10 VIA kantine kl 14:00</td>
-              <td>Vi mødes og spiller trivia, og finder quix mesteren</td>
-              <td>
+              </div>
+            </div>
+            <div class = "row">
+              <div class="col"> divivia Pursuit aften</div>
+              <div class="col"> lørdag d. 22/10 VIA kantine kl 14:00</div>
+              <div class="col"> Vi mødes og spiller divivia, og finder quix mesteren</div>
+              <div class="col"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
-                  method="post"
+                  mediv od="post"
                   name="myform">
                   <label for="Fname_3">First name:</label>
                   <input type="text" name="Fname" id="Fname_3"><br>
@@ -122,19 +135,19 @@
                   <input type="text" name="Lname" id="Lname_3"><br>
                   <input type="submit" value="Send tilmelding">
                 </form>
-              </td>
-            </tr>
-            <tr>
-              <td>Puzzle spil</td>
-              <td>søndag d. 6/11 VIA kantine kl 10:00</td>
-              <td>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"> Puzzle spil</div>
+              <div class="col"> søndag d. 6/11 VIA kantine kl 10:00</div>
+              <div class="col"> 
                 Vi mødes og ligger Puzzle spil, der vil være gratis kaffe og kage
                 i baren
-              </td>
-              <td>
+              </div>
+              <div class="col"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
-                  method="post"
+                  mediv od="post"
                   name="myform">
                   <label for="Fname_4">First name:</label>
                   <input type="text" name="Fname" id="Fname_4"><br>
@@ -142,19 +155,19 @@
                   <input type="text" name="Lname" id="Lname_4"><br>
                   <input type="submit" value="Send tilmelding">
                 </form>
-              </td>
-            </tr>
-            <tr>
-              <td>Risk</td>
-              <td>Torsdag d 24/11 VIA kantine kl 19:00</td>
-              <td>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"> Risk</div>
+              <div class="col"> Torsdag d 24/11 VIA kantine kl 19:00</div>
+              <div class="col"> 
                 Vi mødes og spiller risk, og ser hvem der kan erobre
                 verdensherredømmet
-              </td>
-              <td>
+              </div>
+              <div class="col"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
-                  method="post"
+                  mediv od="post"
                   name="myform">
                   <label for="Fname_5">First name:</label>
                   <input type="text" name="Fname" id="Fname_5"><br>
@@ -162,19 +175,19 @@
                   <input type="text" name="Lname" id="Lname_5"><br>
                   <input type="submit" value="Send tilmelding">
                 </form>
-              </td>
-            </tr>
-            <tr>
-              <td>Jule quiz</td>
-              <td>Onsdag d. 14/12 VIA kantine kl 16:00</td>
-              <td>
+              </div>
+            </div>
+            <div class = "row">
+              <div class="col"> Jule quiz</div>
+              <div class="col"> Onsdag d. 14/12 VIA kantine kl 16:00</div>
+              <div class="col"> 
                 Der er julequiz, kom og vær med. Der vil være gløg og æbleskiver
                 for 20 kr.
-              </td>
-              <td>
+              </div>
+              <div class="col"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
-                  method="post"
+                  mediv od="post"
                   name="myform">
                   <label for="Fname_6">First name:</label>
                   <input type="text" name="Fname" id="Fname_6"><br>
@@ -182,9 +195,9 @@
                   <input type="text" name="Lname" id="Lname_6"><br>
                   <input type="submit" value="Send tilmelding">
                 </form>
-              </td>
-            </tr>
-          </table></div>   
+              </div>
+            </div>
+          </div>    
       </div>
     </div>          
         <div id="facebook">
@@ -193,7 +206,7 @@
             <img
               src="../images/facebook.jpg"
               alt="Link til vores facebook side"
-              style="width: 45px; height: 45px">
+              style="widdiv : 45px; height: 45px">
           </a>
         </div>
       </div>
