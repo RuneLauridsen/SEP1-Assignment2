@@ -16,23 +16,18 @@
     <script src="../js/bootsdivap.min.js"></script>
   </head>
 
-  <!-- <style>
-    td,
-    div  {
-      border: 1px solid black;
-      text-align: left;
-      padding: 8px;
-      background-color: grey;
-      border-color: black;
-    }
-
-      div:ndiv -child(even) td:ndiv -child(even), div:ndiv -child(odd) td:ndiv -child(odd) {
+  <style>
+      .col-md-3
+      {
+        border: 2px solid black;
+      }
+      /* div:ndiv -child(even) td:ndiv -child(even), div:ndiv -child(odd) td:ndiv -child(odd) {
         background: grey;
       }
       div:ndiv -child(odd) td:ndiv -child(even), div:ndiv -child(even) td:ndiv -child(odd) {
       background: white;
-      } 
-  </style> -->
+      }  */
+  </style>
 
   <body>
     <div class="container-fluid">
@@ -77,21 +72,21 @@
         </div>
         
         <div class="col-10  ">
-          <h1>events</h1>
+          <h1 class = "align-items-center">Events</h1>
           
            <div class="container-fluid" id="tabel1" >
             <div class="row">
-              <div class="col-3">Event navn</div >
-              <div class="col-3">Lokation og tid</div >
-              <div class="col-3">Beskrivelse</div >
-              <div class="col-3">Tilmeld</div >
+              <div class="col-md-3">Event navn</div >
+              <div class="col-md-3">Lokation og tid</div >
+              <div class="col-md-3">Beskrivelse</div >
+              <div class="col-md-3">Tilmeld</div >
             </div>
             <div class="row">
-              <div class="col"> Ludo aften</div>
-              <div class="col"> 1/10 VIA kantine kl 19:00</div>
-              <div class="col"> Vi mødes og spiller ludo, og finder ludo mesteren</div>
-              <div class="col"> 
-                <form action="http://www.Events.com/formhandler.php" mediv class ="col"od="post"
+              <div class="col-md-3"> Ludo aften</div>
+              <div class="col-md-3"> 1/10 VIA kantine kl 19:00</div>
+              <div class="col-md-3"> Vi mødes og spiller ludo, og finder ludo mesteren</div>
+              <div class="col-md-3"> 
+                <form action="http://www.Events.com/formhandler.php" mediv od="post"
                   name="myform">
                   <label for="Fname_1">First name:</label>
                   <input type="text" name="Fname" id="Fname_1"><br>
@@ -102,12 +97,12 @@
               </div>
             </div>
             <div class="row">
-              <div class="col"> Skak konkurrence</div>
-              <div class="col"> 5/10 VIA kantine kl 20:00</div>
-              <div class="col"> 
+              <div class="col-md-3"> Skak konkurrence</div>
+              <div class="col-md-3"> 5/10 VIA kantine kl 20:00</div>
+              <div class="col-md-3"> 
                 Vi mødes i kantinen hvor der vil blive afholdt skak konkurrence
               </div>
-              <div class="col"> 
+              <div class="col-md-3"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
                   mediv od="post"
@@ -121,10 +116,10 @@
               </div>
             </div>
             <div class = "row">
-              <div class="col"> divivia Pursuit aften</div>
-              <div class="col"> lørdag d. 22/10 VIA kantine kl 14:00</div>
-              <div class="col"> Vi mødes og spiller divivia, og finder quix mesteren</div>
-              <div class="col"> 
+              <div class="col-md-3"> Trivia Pursuit aften</div>
+              <div class="col-md-3"> lørdag d. 22/10 VIA kantine kl 14:00</div>
+              <div class="col-md-3"> Vi mødes og spiller trivia, og finder quiz mesteren</div>
+              <div class="col-md-3"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
                   mediv od="post"
@@ -138,13 +133,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col"> Puzzle spil</div>
-              <div class="col"> søndag d. 6/11 VIA kantine kl 10:00</div>
-              <div class="col"> 
+              <div class="col-md-3"> Puzzle spil</div>
+              <div class="col-md-3"> søndag d. 6/11 VIA kantine kl 10:00</div>
+              <div class="col-md-3"> 
                 Vi mødes og ligger Puzzle spil, der vil være gratis kaffe og kage
                 i baren
               </div>
-              <div class="col"> 
+              <div class="col-md-3"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
                   mediv od="post"
@@ -158,13 +153,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col"> Risk</div>
-              <div class="col"> Torsdag d 24/11 VIA kantine kl 19:00</div>
-              <div class="col"> 
+              <div class="col-md-3"> Risk</div>
+              <div class="col-md-3"> Torsdag d 24/11 VIA kantine kl 19:00</div>
+              <div class="col-md-3"> 
                 Vi mødes og spiller risk, og ser hvem der kan erobre
                 verdensherredømmet
               </div>
-              <div class="col"> 
+              <div class="col-md-3"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
                   mediv od="post"
@@ -178,13 +173,13 @@
               </div>
             </div>
             <div class = "row">
-              <div class="col"> Jule quiz</div>
-              <div class="col"> Onsdag d. 14/12 VIA kantine kl 16:00</div>
-              <div class="col"> 
+              <div class="col-md-3"> Jule quiz</div>
+              <div class="col-md-3"> Onsdag d. 14/12 VIA kantine kl 16:00</div>
+              <div class="col-md-3"> 
                 Der er julequiz, kom og vær med. Der vil være gløg og æbleskiver
                 for 20 kr.
               </div>
-              <div class="col"> 
+              <div class="col-md-3"> 
                 <form
                   action="http://www.Events.com/formhandler.php"
                   mediv od="post"
