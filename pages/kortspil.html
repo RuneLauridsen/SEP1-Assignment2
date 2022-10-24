@@ -8,9 +8,6 @@
     <!-- Defines charset to use -->
     <meta charset="utf-8">
 
-    <!-- Imports CSS styling -->
-    <link href="../css/styles.css" type="text/css" rel="stylesheet">
-
     <!-- Sets the title of this page -->
     <title>Kortspil - VIA Board Game Group</title>
 
@@ -18,166 +15,151 @@
     <link rel="icon" type="image/png" href="../images/icon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
     <!-- Imports CSS styling -->
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+
     <script src="../js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row" id="hori-navbar">
-        <div class="col-12 d-flex flex-row align-items-center">
-          <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board
-            Game Group Logo">
-          <h3>VIA Board Game Group</h3>
+    <div>
+
+      <div class="container-fluid">
+        <div class="row" id="hori-navbar">
+          <div class="col-12 d-flex flex-row align-items-center">
+            <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board Game Group Logo">
+            <h3>VIA Board Game Group</h3>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <!-- In >=md view, the #vert-navbar is positioned in column 1-2, as a vertical navbar.  
-             In <=sm view, the #vert-navbar is collapsed into a hamburger menu. -->
-        <div class="col-md-2 p-0" id="vert-navbar-container">
-          <nav class="navbar navbar-expand-md">
-            <!-- In md view, we set flex-column, since menu items 
-              should be stacked vertically in vertical navbar -->
-            <div class="container-fluid flex-md-column align-items-md-start
-              ms-2">
-              <p class="navbar-brand mb-md-0">Menu</p>
-              <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#vert-navbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="vert-navbar">
-                <ul class="navbar-nav flex-md-column">
-                  <li><a class="nav-link" href="index.html">Forside</a></li>
-                  <li>
-                    <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
-                    <a class="nav-link" href="#vert-navbar-sub"
-                      data-bs-toggle="collapse">Brætspil</a>
-                    <ul class="collapse navbar-nav flex-column ms-md-2"
-                      id="vert-navbar-sub">
-                      <li><a href="braetspil.html" class="nav-link">Alle</a></li>
-                      <li><a href="familiespil.html" class="nav-link">Familie</a></li>
-                      <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
-                      <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
-                      <li><a href="triviaspil.html" class="nav-link">Trivia</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="nav-link" href="events.html">Events</a></li>
-                  <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
-                </ul>
+        <div class="row">
+          <!-- In >=md view, the #vert-navbar is positioned in column 1-2, as a vertical navbar.  
+               In <=sm view, the #vert-navbar is collapsed into a hamburger menu. -->
+          <div class="col-md-2 p-0" id="vert-navbar-container">
+            <nav class="navbar navbar-expand-md">
+              <!-- In md view, we set flex-column, since menu items 
+                should be stacked vertically in vertical navbar -->
+              <div class="container-fluid flex-md-column align-items-md-start ms-2">
+                <p class="navbar-brand mb-md-0">Menu</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vert-navbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="vert-navbar">
+                  <ul class="navbar-nav flex-md-column">
+                    <li><a class="nav-link" href="index.html">Forside</a></li>
+                    <li>
+                      <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
+                      <a class="nav-link" href="#vert-navbar-sub" data-bs-toggle="collapse">Brætspil</a>
+                      <ul class="collapse navbar-nav flex-column ms-md-2" id="vert-navbar-sub">
+                        <li><a href="braetspil.html" class="nav-link">Alle</a></li>
+                        <li><a href="familiespil.html" class="nav-link">Familie</a></li>
+                        <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
+                        <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
+                        <li><a href="triviaspil.html" class="nav-link">Trivia</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </nav>
-        </div>
-        <div class="col">
-          <div class="container-fluid p-5" id="content-container">
-            <div class="row">
-              <div class="col-auto">
-                <!-- Underline header -->
-                <div class="border-bottom border-2 border-dark mb-2">
-                  <h2>Kortspil</h2>
+            </nav>
+          </div>
+          <div class="col">
+            <div class="container-fluid p-5" id="content-container">
+              <div class="row">
+                <div class="col-auto">
+                  <!-- Underline header -->
+                  <div class="border-bottom border-2 border-dark mb-2">
+                    <h2>Kortspil</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-auto">
+                  <p>
+                    Kortspil er en populær genre, både som et helt standard sæt
+                    kort, men
+                    også i andre formatter som for eksempelvis Uno. Man går aldrig
+                    helt
+                    galt i byen med et kortspil.
+                  </p>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <!-- Drop down menu that selects number of players, for a given game -->
+                <div class="dropDownMenu">
+                  <label>Antal spillere</label>
+                  <select name="antal_spillere">
+                    <option value="2-4">1 - 4</option>
+                    <option value="4-8">4 - 8</option>
+                    <option value="8-16">8 - 16</option>
+                    <option value="16+">16+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- Uno -->
+                  <div class="card">
+                    <img class="card-img-top" src="../images/brætspil/uno.jpg"
+                      alt="Uno">
+                    <div class="card-body">
+                      <h5 class="card-title">Uno</h5>
+                      <img class="card-img-players" src="../images/people.png"
+                        alt="People icon">
+                      <p class="card-text card-text-players">2 - 10</p>
+                      <p class="card-text">Ejer: Louise Kelpak</p>
+                      <p class="card-text card-text-status">Ledig</p>
+                    </div>
+                  </div>
+
+                  <!-- Cards Against Humanity -->
+                  <div class="card">
+                    <img class="card-img-top"
+                      src="../images/brætspil/cardsAgainstHumanity.jpg" alt="Cards
+                      Against Humanity">
+                    <div class="card-body">
+                      <h5 class="card-title">Cards Against Humanity</h5>
+                      <img class="card-img-players" src="../images/people.png"
+                        alt="People icon">
+                      <p class="card-text card-text-players">4+</p>
+                      <p class="card-text">Ejer: Eva Ditsen</p>
+                      <p class="card-text card-text-status">Ledig</p>
+                    </div>
+                  </div>
+
+                  <!-- Sequence -->
+                  <div class="card">
+                    <img class="card-img-top" src="../images/brætspil/sequence.jpg"
+                      alt="Sequence">
+                    <div class="card-body">
+                      <h5 class="card-title">Sequence</h5>
+                      <img class="card-img-players" src="../images/people.png"
+                        alt="People icon">
+                      <p class="card-text card-text-players">2 - 12</p>
+                      <p class="card-text">Ejer: Kasper Kampmann</p>
+                      <p class="card-text card-text-status">Ledig</p>
+                    </div>
+                  </div>
+
+                  <!-- Poker -->
+                  <div class="card">
+                    <img class="card-img-top" src="../images/brætspil/poker.jpg"
+                      alt="Poker">
+                    <div class="card-body">
+                      <h5 class="card-title">Poker</h5>
+                      <img class="card-img-players" src="../images/people.png"
+                        alt="People icon">
+                      <p class="card-text card-text-players">2 - 12</p>
+                      <p class="card-text">Ejer: Rita Frederiksen</p>
+                      <p class="card-text card-text-status">Ledig</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-auto">
-                <p>
-                  Kortspil er en populær genre, både som et helt standard sæt
-                  kort, men
-                  også i andre formatter som for eksempelvis Uno. Man går aldrig
-                  helt
-                  galt i byen med et kortspil.
-                </p>
-              </div>
-            </div>
-
-            <!-- Drop down menu that selects number of players, for a given game -->
-            <div class="dropDownMenu">
-              <label>Antal spillere</label>
-              <select name="antal_spillere">
-                <option value="2-4">1 - 4</option>
-                <option value="4-8">4 - 8</option>
-                <option value="8-16">8 - 16</option>
-                <option value="16+">16+</option>
-              </select>
-            </div>
-          </div>
-
-
-
-
-
-
-          <!-- Category description -->
-          <p id="kategoriBeskrivelse">
-
-          </p>
-
-          <!-- The board games 
-        This div contains all the game "cards". Each card contains an image,
-        game name, number of players, game owner, and possible lent to and lent date.
-        -->
-          <div id="boardGamesCon">
-
-            <!-- Uno -->
-            <div class="card">
-              <img class="card-img-top" src="../images/brætspil/uno.jpg"
-                alt="Uno">
-              <div class="card-body">
-                <h5 class="card-title">Uno</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People icon">
-                <p class="card-text card-text-players">2 - 10</p>
-                <p class="card-text">Ejer: Louise Kelpak</p>
-                <p class="card-text card-text-status">Ledig</p>
-              </div>
-            </div>
-
-            <!-- Cards Against Humanity -->
-            <div class="card">
-              <img class="card-img-top"
-                src="../images/brætspil/cardsAgainstHumanity.jpg" alt="Cards
-                Against Humanity">
-              <div class="card-body">
-                <h5 class="card-title">Cards Against Humanity</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People icon">
-                <p class="card-text card-text-players">4+</p>
-                <p class="card-text">Ejer: Eva Ditsen</p>
-                <p class="card-text card-text-status">Ledig</p>
-              </div>
-            </div>
-
-            <!-- Sequence -->
-            <div class="card">
-              <img class="card-img-top" src="../images/brætspil/sequence.jpg"
-                alt="Sequence">
-              <div class="card-body">
-                <h5 class="card-title">Sequence</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People icon">
-                <p class="card-text card-text-players">2 - 12</p>
-                <p class="card-text">Ejer: Kasper Kampmann</p>
-                <p class="card-text card-text-status">Ledig</p>
-              </div>
-            </div>
-
-            <!-- Poker -->
-            <div class="card">
-              <img class="card-img-top" src="../images/brætspil/poker.jpg"
-                alt="Poker">
-              <div class="card-body">
-                <h5 class="card-title">Poker</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People icon">
-                <p class="card-text card-text-players">2 - 12</p>
-                <p class="card-text">Ejer: Rita Frederiksen</p>
-                <p class="card-text card-text-status">Ledig</p>
-              </div>
-            </div>
-
-            <!-- Some extra space in the bottom of the page -->
-            <div class="bottomSpace"></div>
           </div>
         </div>
       </div>
