@@ -1,5 +1,5 @@
 /* 
- * Styles for vertical and horizontal navbar 
+ * Styles for vertical and horizontal navbar used on all pages
  */
 
 #vert-navbar-container {
@@ -20,7 +20,7 @@
 }
 
 /*
- * Styles for boardgame cards.
+ * Styles for boardgame cards
  */
 
 .card {
