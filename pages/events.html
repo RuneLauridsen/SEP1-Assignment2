@@ -19,44 +19,7 @@
     <style>
       
 
-        
-      .row:nth-child(odd) {
-        background-color: gray;
-      } 
 
-      .row:nth-child(even) {
-        background-color: white;
-      }
-      
-      /* 720px = bootstrap md */
-      /* It is simpler to write this media query, 
-        than adding many "border-md" and "bg-md" classes */
-      @media only screen and (min-width: 720px) {
-        .row:nth-child(even) .col-md-3:nth-child(even)  {
-          background: grey;
-
-        }
-        .row:nth-child(odd) .col-md-3:nth-child(even) {
-          background: white;
-        }
-
-        .col-md-3
-        {
-          border: 2px solid black;
-        }
-      }
-
-      form * {
-        width: 100%;
-      }
-
-      input[type="submit"] {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: min-content;
-      }
-     
-     
       </style>
   </head>
 
@@ -102,10 +65,11 @@
           </nav>
         </div>
 
-        <div class="col-12 col-md-10 Event ">
-          <h1 class="align-items-center">Events</h1>
+        <div class="col" id="events-container">
+          <h1 class="text-center">Events</h1>
 
           <div class="container-fluid px-5" id="tabel1">
+            <!-- Headers only visible in >=md view -->
             <div class="row d-none d-md-flex">
               <div class="col-md-3">Event navn</div>
               <div class="col-md-3">Lokation og tid</div>

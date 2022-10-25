@@ -38,11 +38,9 @@
           <nav class="navbar navbar-expand-md">
             <!-- In md view, we set flex-column, since menu items 
               should be stacked vertically in vertical navbar -->
-            <div class="container-fluid flex-md-column align-items-md-start
-              ms-2">
+            <div class="container-fluid flex-md-column align-items-md-start ms-2">
               <p class="navbar-brand mb-md-0">Menu</p>
-              <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#vert-navbar">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vert-navbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="vert-navbar">
@@ -50,10 +48,8 @@
                   <li><a class="nav-link" href="index.html">Forside</a></li>
                   <li>
                     <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
-                    <a class="nav-link" href="#vert-navbar-sub"
-                      data-bs-toggle="collapse">Brætspil</a>
-                    <ul class="collapse navbar-nav flex-column ms-md-2"
-                      id="vert-navbar-sub">
+                    <a class="nav-link" href="#vert-navbar-sub" data-bs-toggle="collapse">Brætspil</a>
+                    <ul class="collapse navbar-nav flex-column ms-md-2" id="vert-navbar-sub">
                       <li><a href="braetspil.html" class="nav-link">Alle</a></li>
                       <li><a href="familiespil.html" class="nav-link">Familie</a></li>
                       <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
@@ -81,86 +77,76 @@
             <div class="row">
               <div class="col-auto">
                 <p>
-                  Hvis man vil overleve i denne kategori er viden et must. Parat
-                  viden
-                  er nemelig nøglen til Trivia spil, hvor man får spørgsmål i
-                  øst og
+                  Hvis man vil overleve i denne kategori er viden et must. Parat viden
+                  er nemelig nøglen til Trivia spil, hvor man får spørgsmål i øst og
                   vest. Kender du nogle der skal have udfordret deres viden?
                 </p>
               </div>
             </div>
-
-            <!-- Drop down menu that selects number of players, for a given game -->
-            <div class="dropDownMenu">
-              <label>Antal spillere</label>
-              <select name="antal_spillere">
-                <option value="2-4">1 - 4</option>
-                <option value="4-8">4 - 8</option>
-                <option value="8-16">8 - 16</option>
-                <option value="16+">16+</option>
-              </select>
-            </div>
-          </div>
-
-
-          <!-- The board games 
-        This div contains all the game "cards". Each card contains an image,
-        game name, number of players, game owner, and possible lent to and lent date.
-        -->
-          <div id="boardGamesCon">
-
-            <!-- Trivial Pursuit -->
-            <div class="card">
-              <img class="card-img-top"
-                src="../images/brætspil/trivialPursuit.jpg"
-                alt="Trivial Pursuit">
-              <div class="card-body">
-                <h5 class="card-title">Trivial Pursuit</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People
-                  icon">
-                <p class="card-text card-text-players">2 - 6</p>
-                <p class="card-text">Ejer: Karl Klausen</p>
-                <p class="card-text card-text-status">Ledig</p>
+            <div class="row mb-5">
+              <!-- Drop down menu that selects number of players, for a given game -->
+              <div>
+                <label>Antal spillere</label>
+                <select name="antal_spillere">
+                  <option value="2-4">1 - 4</option>
+                  <option value="4-8">4 - 8</option>
+                  <option value="8-16">8 - 16</option>
+                  <option value="16+">16+</option>
+                </select>
               </div>
             </div>
-
-            <!-- Cranium -->
-            <div class="card">
-              <img class="card-img-top" src="../images/brætspil/cranium.jpg"
-                alt="Cranium">
-              <div class="card-body">
-                <h5 class="card-title">Cranium</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People
-                  icon">
-                <p class="card-text card-text-players">2- 6</p>
-                <p class="card-text">Ejer: Rasmus Berg</p>
-                <p class="card-text card-text-status">Udlånt til: Solvej Nielsen
-                  24.8.2022</p>
+            <div class="row">
+              <!-- Trivial Pursuit -->
+              <div class="card">
+                <img class="card-img-top"
+                  src="../images/brætspil/trivialPursuit.jpg"
+                  alt="Trivial Pursuit">
+                <div class="card-body">
+                  <h5 class="card-title">Trivial Pursuit</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People
+                    icon">
+                  <p class="card-text card-text-players">2 - 6</p>
+                  <p class="card-text">Ejer: Karl Klausen</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
               </div>
-            </div>
 
-
-
-            <!-- Bezzerwizzer -->
-            <div class="card">
-              <img class="card-img-top"
-                src="../images/brætspil/bezzerwizzer.jpg"
-                alt="ALT_TEXT">
-              <div class="card-body">
-                <h5 class="card-title">Bezzerwizzer</h5>
-                <img class="card-img-players" src="../images/people.png"
-                  alt="People
-                  icon">
-                <p class="card-text card-text-players">2 - 16</p>
-                <p class="card-text">Ejer: Erik Olsen</p>
-                <p class="card-text card-text-status">Ledig</p>
+              <!-- Cranium -->
+              <div class="card">
+                <img class="card-img-top" src="../images/brætspil/cranium.jpg"
+                  alt="Cranium">
+                <div class="card-body">
+                  <h5 class="card-title">Cranium</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People
+                    icon">
+                  <p class="card-text card-text-players">2- 6</p>
+                  <p class="card-text">Ejer: Rasmus Berg</p>
+                  <p class="card-text card-text-status">Udlånt til: Solvej Nielsen
+                    24.8.2022</p>
+                </div>
               </div>
-            </div>
 
-            <!-- Some extra space in the bottom of the page -->
-            <div class="bottomSpace"></div>
+              <!-- Bezzerwizzer -->
+              <div class="card">
+                <img class="card-img-top"
+                  src="../images/brætspil/bezzerwizzer.jpg"
+                  alt="ALT_TEXT">
+                <div class="card-body">
+                  <h5 class="card-title">Bezzerwizzer</h5>
+                  <img class="card-img-players" src="../images/people.png"
+                    alt="People
+                    icon">
+                  <p class="card-text card-text-players">2 - 16</p>
+                  <p class="card-text">Ejer: Erik Olsen</p>
+                  <p class="card-text card-text-status">Ledig</p>
+                </div>
+              </div>
+
+              <!-- Some extra space in the bottom of the page -->
+              <div class="bottomSpace"></div>
+            </div>
           </div>
         </div>
       </div>
