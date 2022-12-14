@@ -10,4 +10,5 @@ $.get("../boardgames.json", function (contactData, status) {
   container.find("#contact-email").text(contactInfo.email);
   container.find("#contact-email").attr("href", "mailto:" + contactInfo.email);
   container.find("#contact-phone").text(contactInfo.phone);
+  container.find("#contact-phone").attr("href", "tel:" + contactInfo.phone);
 });
