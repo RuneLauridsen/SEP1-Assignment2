@@ -6,6 +6,8 @@ $("#sort").change(function () {
 
 // https://www.w3schools.com/tags/att_global_data.asp
 const currentCategory = document.currentScript.getAttribute("data-category");
+const isBought = document.currentScript.getAttribute("data-bought") == "true";
+
 const htmlTemplate =
     `<div class="card">
         <img class="card-img-top" src="../images/boardgames/newLudo.jpg" alt="New Ludo">
@@ -35,7 +37,7 @@ function reloadBoardgames(sort) {
         for (let i = 0; i < boardgames.length; i++) {
             const boardgame = boardgames[i];
 
-            const ignoreBought = boardgame.isBought == false;
+            const ignoreBought = boardgame.isBought != isBought;
             const ignoreCategory = boardgame.category != currentCategory && currentCategory != "ALL"
             if (ignoreBought || ignoreCategory)
                 continue;
@@ -43,7 +45,7 @@ function reloadBoardgames(sort) {
             const cardTitle = boardgame.name;
             const cardImgAlt = boardgame.name;
             const cardTextPlayers = boardgame.numberOfPlayers.min + " - " + boardgame.numberOfPlayers.max
-            const cardTextOwner = boardgame.owner.name;
+            const cardTextOwner = getOwnerText(boardgame);
             const cardTextRating = getRatingText(boardgame);
             const cardTextStatus = getStatusText(boardgame);
 
@@ -122,22 +124,33 @@ function getRatingText(boardgame) {
 }
 
 function getStatusText(boardgame) {
+    if (boardgame.isBought) {
+        // If boardgame is bought, show loan status.
 
-    const currentLoan = getCurrentLoan(boardgame);
-    if (currentLoan == null) {
-        return "Ledig";
-    }
-    else {
-        return "Udlånt til: " + currentLoan.student.name + " " +
-            currentLoan.interval.to.day + "." +
-            currentLoan.interval.to.month + "." +
-            currentLoan.interval.to.year;
+        const currentLoan = getCurrentLoan(boardgame);
+        if (currentLoan == null) {
+            return "Ledig";
+        }
+        else {
+            return "Udlånt til: " + currentLoan.student.name + " " +
+                currentLoan.interval.to.day + "." +
+                currentLoan.interval.to.month + "." +
+                currentLoan.interval.to.year;
+        }
+    } else {
+        // If boardgame is not bought, who voting status.
+        return "Antal stemmer: " + (boardgame.votes.votes.length);
     }
 }
 
+function getOwnerText(boardgame) {
+    if (!boardgame.isBought)
+        return "";
+    else
+        return boardgame.owner.name;
+}
 
 function boardgameCompareByName(a, b) {
-
     if (a.name.toUpperCase() < b.name.toUpperCase()) {
         return -1;
     }
