@@ -1,80 +1,91 @@
-var j = 0;
+reloadBoardgames("name");
 
-
-const htmlTemplate =
-    `<div class="card">
-    <img class="card-img-top" src="../images/boardgames/newLudo.jpg" alt="New Ludo">
-    <div class="card-body">
-        <h5 class="card-title">New Ludo</h5>
-        <img class="card-img-players" src="../images/people.png" alt="People icon">
-        <p class="card-text card-text-players">2 - 6</p>
-        <p class="card-text card-text-owner">Ejer: Mathias Berg</p>
-        <p class="card-text card-text-status">Udlånt til: Bob Hansen 24.8.2022</p>
-    </div>
-</div>`
-
+$("#sort").change(function () {
+    reloadBoardgames($(this).val());
+})
 
 // https://www.w3schools.com/tags/att_global_data.asp
 const currentCategory = document.currentScript.getAttribute("data-category");
+const htmlTemplate =
+    `<div class="card">
+        <img class="card-img-top" src="../images/boardgames/newLudo.jpg" alt="New Ludo">
+        <div class="card-body">
+            <h5 class="card-title">New Ludo</h5>
+            <p class="card-text card-text-rating">5</p>
+            <img class="card-img-players" src="../images/people.png" alt="People icon">
+            <p class="card-text card-text-players">2 - 6</p>
+            <p class="card-text card-text-owner">Ejer: Mathias Berg</p>
+            <p class="card-text card-text-status">Udlånt til: Bob Hansen 24.8.2022</p>
+        </div>
+    </div>`
 
-$.get("../boardgames.json", function (boardgameClub, status) {
-    let boardgames = boardgameClub.boardgames.boardgames; // wrapped list
+function reloadBoardgames(sort) {
 
-    boardgames = boardgames.sort(boardgameCompareByRating);
+    $.get("../boardgames.json", function (boardgameClub, status) {
+        let boardgames = boardgameClub.boardgames.boardgames; // wrapped list
 
-    const boardgameContainer = $("#boardgame-container");
+        if (sort == "name")
+            boardgames = boardgames.sort(boardgameCompareByName);
+        else if (sort == "rating")
+            boardgames = boardgames.sort(boardgameCompareByRating);
 
-    for (let i = 0; i < boardgames.length; i++) {
-        console.log(boardgames[i].name);
+        const boardgameContainer = $("#boardgame-container");
+        boardgameContainer.html("");
+
+        for (let i = 0; i < boardgames.length; i++) {
+            const boardgame = boardgames[i];
+
+            const ignoreBought = boardgame.isBought == false;
+            const ignoreCategory = boardgame.category != currentCategory && currentCategory != "ALL"
+            if (ignoreBought || ignoreCategory)
+                continue;
+
+            const cardTitle = boardgame.name;
+            const cardImgAlt = boardgame.name;
+            const cardTextPlayers = boardgame.numberOfPlayers.min + " - " + boardgame.numberOfPlayers.max
+            const cardTextOwner = boardgame.owner.name;
+            const cardTextRating = getRatingText(boardgame);
+            const cardTextStatus = getStatusText(boardgame);
 
 
-        const boardgame = boardgames[i];
-        const cardTitle = boardgame.name;
-        const cardImgAlt = boardgame.name;
-        const cardTextPlayers = boardgame.numberOfPlayers.min + " - " + boardgame.numberOfPlayers.max
-        const cardTextOwner = boardgame.owner.name;
-        let cardTextStatus = "Ledig";
+            // Uses jquery's .text() method to sanitize input.
 
-        const currentLoan = getCurrentLoan(boardgame);
-        if (currentLoan != null) {
-            cardTextStatus = "Udlånt til: " + currentLoan.student.name + " "
-                + currentLoan.interval.to.day + "."
-                + currentLoan.interval.to.month + "."
-                + currentLoan.interval.to.year;
+            boardgameContainer
+                .append(htmlTemplate);
+
+            // TODO: Get images from java app
+            boardgameContainer
+                .find(".card-img-top")
+                .last()
+                .attr("alt", cardImgAlt)
+
+            boardgameContainer
+                .find(".card-title")
+                .last()
+                .text(cardTitle);
+
+            boardgameContainer
+                .find(".card-text-players")
+                .last()
+                .text(cardTextPlayers);
+
+            boardgameContainer
+                .find(".card-text-owner")
+                .last()
+                .text(cardTextOwner);
+
+            boardgameContainer
+                .find(".card-text-status")
+                .last()
+                .text(cardTextStatus);
+
+            boardgameContainer
+                .find(".card-text-rating")
+                .last()
+                .text(cardTextRating);
         }
-
-        // Uses jquery's .text() method to sanitize input.
-
-        boardgameContainer
-            .append(htmlTemplate);
-
-
-        boardgameContainer
-            .find(".card-img-top")
-            .last()
-            .attr("alt", cardImgAlt)
-
-        boardgameContainer
-            .find(".card-title")
-            .last()
-            .text(cardTitle);
-
-        boardgameContainer
-            .find(".card-text-players")
-            .last()
-            .text(cardTextPlayers);
-
-        boardgameContainer
-            .find(".card-text-owner")
-            .last()
-            .text(cardTextOwner);
-
-        boardgameContainer
-            .find(".card-text-status")
-            .last()
-            .text(cardTextStatus);
-    }
-});
+    });
+}
 
 function getCurrentLoan(boardgame) {
     currentDate = Date.now();
@@ -98,14 +109,39 @@ function getCurrentLoan(boardgame) {
     return null;
 }
 
+function getRatingText(boardgame) {
+    avgRating = getAverageRating(boardgame);
 
+    if (avgRating == null) { // boardgame has no review
+        return "Ikke anmeldt"
+    }
+    else {
+        avgRatingRounded = Math.round(avgRating);
+        return "★".repeat(avgRatingRounded) + "☆".repeat(5 - avgRatingRounded) + " (" + avgRating.toFixed(1) + ")";
+    }
+}
+
+function getStatusText(boardgame) {
+
+    const currentLoan = getCurrentLoan(boardgame);
+    if (currentLoan == null) {
+        return "Ledig";
+    }
+    else {
+        return "Udlånt til: " + currentLoan.student.name + " " +
+            currentLoan.interval.to.day + "." +
+            currentLoan.interval.to.month + "." +
+            currentLoan.interval.to.year;
+    }
+}
 
 
 function boardgameCompareByName(a, b) {
-    if (a.name < b.name) {
+
+    if (a.name.toUpperCase() < b.name.toUpperCase()) {
         return -1;
     }
-    if (a.name > b.name) {
+    if (a.name.toUpperCase() > b.name.toUpperCase()) {
         return 1;
     }
     return 0;
@@ -114,9 +150,6 @@ function boardgameCompareByName(a, b) {
 function boardgameCompareByRating(a, b) {
     const aRating = getAverageRating(a);
     const bRating = getAverageRating(b);
-
-    console.log("a: " + aRating);
-    console.log("b: " + bRating);
 
     if (aRating < bRating) {
         return 1;
@@ -131,7 +164,7 @@ function getAverageRating(boardgame) {
     const reviews = boardgame.reviews.reviews;
 
     if (reviews.length == 0) {
-        return 0;
+        return null;
     }
 
     let avg = 0;

@@ -52,6 +52,10 @@
   margin: 0px;
 }
 
+.card-text-rating {
+  text-align: center;
+}
+
 .card-text-players {
   display: inline;
 }
