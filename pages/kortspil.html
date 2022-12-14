@@ -58,6 +58,7 @@
                         <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
                         <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
                         <li><a href="triviaspil.html" class="nav-link">Trivia</a></li>
+                        <li><a href="vote.html" class="nav-link">Afstemning</a></li>
                       </ul>
                     </li>
                     <li><a class="nav-link" href="events.html">Events</a></li>
@@ -87,66 +88,16 @@
                 </div>
               </div>
               <div class="row mb-5">
-                <!-- Drop down menu that selects number of players, for a given game -->
                 <div>
-                  <label>Antal spillere</label>
-                  <select name="antal_spillere">
-                    <option value="2-4">1 - 4</option>
-                    <option value="4-8">4 - 8</option>
-                    <option value="8-16">8 - 16</option>
-                    <option value="16+">16+</option>
+                  <label>Sortering: </label>
+                  <select id="sort" name="sort">
+                    <option value="name">Navn</option>
+                    <option value="rating">Anmeldelse</option>
                   </select>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
-                  <!-- Uno -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/uno.jpg" alt="Uno">
-                    <div class="card-body">
-                      <h5 class="card-title">Uno</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 10</p>
-                      <p class="card-text">Ejer: Louise Kelpak</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Cards Against Humanity -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/cardsAgainstHumanity.jpg" alt="Cards Against Humanity">
-                    <div class="card-body">
-                      <h5 class="card-title">Cards Against Humanity</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">4+</p>
-                      <p class="card-text">Ejer: Eva Ditsen</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Sequence -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/sequence.jpg" alt="Sequence">
-                    <div class="card-body">
-                      <h5 class="card-title">Sequence</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 12</p>
-                      <p class="card-text">Ejer: Kasper Kampmann</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Poker -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/poker.jpg" alt="Poker">
-                    <div class="card-body">
-                      <h5 class="card-title">Poker</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 12</p>
-                      <p class="card-text">Ejer: Rita Frederiksen</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
+                <div class="col" id="boardgame-container">
                 </div>
               </div>
             </div>
@@ -154,5 +105,7 @@
         </div>
       </div>
     </div>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/load_boardgames.js" data-category="CARDS" data-bought="true"></script>
   </body>
 </html>

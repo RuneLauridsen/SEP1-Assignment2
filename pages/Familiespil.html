@@ -59,6 +59,7 @@
                         <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
                         <li><a href="kortspil.html" class="nav-link">Kortspil</a></li>
                         <li><a href="triviaspil.html" class="nav-link">Trivia</a></li>
+                        <li><a href="vote.html" class="nav-link">Afstemning</a></li>
                       </ul>
                     </li>
                     <li><a class="nav-link" href="events.html">Events</a></li>
@@ -88,129 +89,16 @@
                 </div>
               </div>
               <div class="row mb-5">
-                <!-- Drop down menu that selects number of players, for a given game -->
                 <div>
-                  <label>Antal spillere</label>
-                  <select name="antal_spillere">
-                    <option value="2-4">1 - 4</option>
-                    <option value="4-8">4 - 8</option>
-                    <option value="8-16">8 - 16</option>
-                    <option value="16+">16+</option>
+                  <label>Sortering: </label>
+                  <select id="sort" name="sort">
+                    <option value="name">Navn</option>
+                    <option value="rating">Anmeldelse</option>
                   </select>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
-                  <!-- New Ludo -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/newLudo.jpg" alt="New Ludo">
-                    <div class="card-body">
-                      <h5 class="card-title">New Ludo</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 6</p>
-                      <p class="card-text">Ejer: Mathias Berg</p>
-                      <p class="card-text card-text-status">Udlånt til: Bob Hansen
-                        24.8.2022</p>
-                    </div>
-                  </div>
-
-                  <!-- Uno -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/uno.jpg" alt="Uno">
-                    <div class="card-body">
-                      <h5 class="card-title">Uno</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 10</p>
-                      <p class="card-text">Ejer: Louise Kelpak</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Monopoly -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/monopoly.jpg" alt="Monopoly">
-                    <div class="card-body">
-                      <h5 class="card-title">Monopoly</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 6</p>
-                      <p class="card-text">Ejer: Søren Hedegaard</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Cranium -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/cranium.jpg" alt="Cranium">
-                    <div class="card-body">
-                      <h5 class="card-title">Cranium</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2- 6</p>
-                      <p class="card-text">Ejer: Rasmus Berg</p>
-                      <p class="card-text card-text-status">Udlånt til: Solvej Nielsen 24.8.2022</p>
-                    </div>
-                  </div>
-
-                  <!-- Vildkatten -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/vilkatten.jpg"
-                      alt="Vildkatten">
-                    <div class="card-body">
-                      <h5 class="card-title">Vildkatten</h5>
-                      <img class="card-img-players" src="../images/people.png"
-                        alt="People icon">
-                      <p class="card-text card-text-players">2- 10</p>
-                      <p class="card-text">Ejer: Rasmus Berg</p>
-                      <p class="card-text card-text-status">Udlånt til: Solvej Nielsen 24.8.2022</p>
-                    </div>
-                  </div>
-
-                  <!-- Klodsmajor -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/klodsmajor.jpg" alt="Klodsmajor">
-                    <div class="card-body">
-                      <h5 class="card-title">Klodsmajor</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2- 10</p>
-                      <p class="card-text">Ejer: Rikke Damgaard</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Spejlæg -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/Spejlæg.jpg" alt="Spejlæg">
-                    <div class="card-body">
-                      <h5 class="card-title">Spejlæg</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 4</p>
-                      <p class="card-text">Ejer: Ole Knudsen</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Hint -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/hint.jpg" alt="Hint">
-                    <div class="card-body">
-                      <h5 class="card-title">Hint</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="People icon">
-                      <p class="card-text card-text-players">2 - 6</p>
-                      <p class="card-text">Game owner: Maibrit Løkke</p>
-                      <p class="card-text card-text-status">Ledig</p>
-                    </div>
-                  </div>
-
-                  <!-- Labyrinth -->
-                  <div class="card">
-                    <img class="card-img-top" src="../images/boardgames/labyrinth.jpg" alt="Labyrinth">
-                    <div class="card-body">
-                      <h5 class="card-title">Labyrinth</h5>
-                      <img class="card-img-players" src="../images/people.png" alt="Labyrinth">
-                      <p class="card-text card-text-players">2 - 4</p>
-                      <p class="card-text">Game owner: Rasmus Berg</p>
-                      <p class="card-text card-text-status">Lånt til Charlotte d. 24.8.2022</p>
-                    </div>
-                  </div>
+                <div class="col" id="boardgame-container">
                 </div>
               </div>
             </div>
@@ -218,5 +106,7 @@
         </div>
       </div>
     </div>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/load_boardgames.js" data-category="FAMILY" data-bought="true"></script>
   </body>
 </html>
