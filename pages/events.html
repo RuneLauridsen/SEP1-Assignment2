@@ -27,7 +27,8 @@
     <div class="container-fluid">
       <div class="row" id="hori-navbar">
         <div class="col-12 d-flex flex-row align-items-center">
-          <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board Game Group Logo">
+          <img id="hori-navbar-logo" src="../images/icon.png" alt="VIA Board
+            Game Group Logo">
           <h3>VIA Board Game Group</h3>
         </div>
       </div>
@@ -38,9 +39,11 @@
           <nav class="navbar navbar-expand-md">
             <!-- In md view, we set flex-column, since menu items 
               should be stacked vertically in vertical navbar -->
-            <div class="container-fluid flex-md-column align-items-md-start ms-2">
+            <div class="container-fluid flex-md-column align-items-md-start
+              ms-2">
               <p class="navbar-brand mb-md-0">Menu</p>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vert-navbar">
+              <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#vert-navbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="vert-navbar">
@@ -48,8 +51,10 @@
                   <li><a class="nav-link" href="index.html">Forside</a></li>
                   <li>
                     <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
-                    <a class="nav-link" href="#vert-navbar-sub" data-bs-toggle="collapse">Brætspil</a>
-                    <ul class="collapse navbar-nav flex-column ms-md-2" id="vert-navbar-sub">
+                    <a class="nav-link" href="#vert-navbar-sub"
+                      data-bs-toggle="collapse">Brætspil</a>
+                    <ul class="collapse navbar-nav flex-column ms-md-2"
+                      id="vert-navbar-sub">
                       <li><a href="braetspil.html" class="nav-link">Alle</a></li>
                       <li><a href="familiespil.html" class="nav-link">Familie</a></li>
                       <li><a href="strategispil.html" class="nav-link">Strategi</a></li>
@@ -72,121 +77,24 @@
             <!-- Headers only visible in >=md view -->
             <div class="row d-none d-md-flex">
               <div class="col-md-3">Event navn</div>
-              <div class="col-md-3">Lokation og tid</div>
+              <div class="col-md-3">Dato</div>
               <div class="col-md-3">Beskrivelse</div>
-              <div class="col-md-3">Tilmeld</div>
+              <div class="col-md-3">Link</div>
             </div>
             <div class="row">
-              <div class="col-md-3"> Ludo aften</div>
-              <div class="col-md-3"> 1/10 VIA kantine kl 19:00</div>
-              <div class="col-md-3"> Vi mødes og spiller ludo, og finder ludo mesteren</div>
+              <div class="event-name col-md-3"> Ludo aften</div>
+              <div class="event-date col-md-3"> 1/10 VIA kantine kl 19:00</div>
+              <div class="event-description col-md-3"> Vi mødes og spiller ludo,
+                og finder ludo
+                mesteren</div>
               <div class="col-md-3">
-                <form action="http://www.Events.com/formhandler.php" method="post"
-                  name="myform">
-                  <label for="Fname_1">First name:</label>
-                  <input type="text" name="Fname" id="Fname_1"><br>
-                  <label for="Lname_1">Last name:</label>
-                  <input type="text" name="Lname" id="Lname_1"><br>
-                  <input type="submit" value="Send tilmelding">
+                <form class="event-link" action="https://google.com"
+                  target="_blank">
+                  <input type="submit" value="Link til event" />
                 </form>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-3"> Skak konkurrence</div>
-              <div class="col-md-3"> 5/10 VIA kantine kl 20:00</div>
-              <div class="col-md-3">
-                Vi mødes i kantinen hvor der vil blive afholdt skak konkurrence
-              </div>
-              <div class="col-md-3">
-                <form
-                  action="http://www.Events.com/formhandler.php"
-                  method="post"
-                  name="myform">
-                  <label for="Fname_2">First name:</label>
-                  <input type="text" name="Fname" id="Fname_2"><br>
-                  <label for="Lname_2">Last name:</label>
-                  <input type="text" name="Lname" id="Lname_2"><br>
-                  <input type="submit" value="Send tilmelding">
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3"> Trivia Pursuit aften</div>
-              <div class="col-md-3"> lørdag d. 22/10 VIA kantine kl 14:00</div>
-              <div class="col-md-3"> Vi mødes og spiller trivia, og finder quiz mesteren</div>
-              <div class="col-md-3">
-                <form
-                  action="http://www.Events.com/formhandler.php"
-                  method="post"
-                  name="myform">
-                  <label for="Fname_3">First name:</label>
-                  <input type="text" name="Fname" id="Fname_3"><br>
-                  <label for="Lname_3">Last name:</label>
-                  <input type="text" name="Lname" id="Lname_3"><br>
-                  <input type="submit" value="Send tilmelding">
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3"> Puzzle spil</div>
-              <div class="col-md-3"> søndag d. 6/11 VIA kantine kl 10:00</div>
-              <div class="col-md-3">
-                Vi mødes og ligger Puzzle spil, der vil være gratis kaffe og kage
-                i baren
-              </div>
-              <div class="col-md-3">
-                <form
-                  action="http://www.Events.com/formhandler.php"
-                  method="post"
-                  name="myform">
-                  <label for="Fname_4">First name:</label>
-                  <input type="text" name="Fname" id="Fname_4"><br>
-                  <label for="Lname_4">Last name:</label>
-                  <input type="text" name="Lname" id="Lname_4"><br>
-                  <input type="submit" value="Send tilmelding">
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3"> Risk</div>
-              <div class="col-md-3"> Torsdag d 24/11 VIA kantine kl 19:00</div>
-              <div class="col-md-3">
-                Vi mødes og spiller risk, og ser hvem der kan erobre
-                verdensherredømmet
-              </div>
-              <div class="col-md-3">
-                <form
-                  action="http://www.Events.com/formhandler.php"
-                  method="post"
-                  name="myform">
-                  <label for="Fname_5">First name:</label>
-                  <input type="text" name="Fname" id="Fname_5"><br>
-                  <label for="Lname_5">Last name:</label>
-                  <input type="text" name="Lname" id="Lname_5"><br>
-                  <input type="submit" value="Send tilmelding">
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3"> Jule quiz</div>
-              <div class="col-md-3"> Onsdag d. 14/12 VIA kantine kl 16:00</div>
-              <div class="col-md-3">
-                Der er julequiz, kom og vær med. Der vil være gløg og æbleskiver
-                for 20 kr.
-              </div>
-              <div class="col-md-3">
-                <form
-                  action="http://www.Events.com/formhandler.php"
-                  method="post"
-                  name="myform">
-                  <label for="Fname_6">First name:</label>
-                  <input type="text" name="Fname" id="Fname_6"><br>
-                  <label for="Lname_6">Last name:</label>
-                  <input type="text" name="Lname" id="Lname_6"><br>
-                  <input type="submit" value="Send tilmelding">
-                </form>
-              </div>
-            </div>
+
           </div>
           <div class="text-white d-flex flex-column align-items-center">
             <p>Gå til vores facebook side, og læs mere</p>
@@ -201,5 +109,7 @@
         </div>
       </div>
     </div>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/load_events.js"></script>
   </body>
 </html>
