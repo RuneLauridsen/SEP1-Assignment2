@@ -12,6 +12,7 @@
 
 #hori-navbar {
   background-color: #f6a61d;
+  height: 10vh;
 }
 
 #hori-navbar-logo {
@@ -52,10 +53,6 @@
   margin: 0px;
 }
 
-.card-text-rating {
-  text-align: center;
-}
-
 .card-text-players {
   display: inline;
 }
@@ -69,6 +66,8 @@
 #events-container {
   background-image: url(../images/boardgame_pieces.jpeg);
   background-size: cover;
+  height: 90vh;
+  overflow-y: auto;
 }
 
 #events-container form * {
@@ -100,7 +99,6 @@
 @media only screen and (min-width: 720px) {
   .row:nth-child(even) .col-md-3:nth-child(even) {
     background: grey;
-
   }
 
   .row:nth-child(odd) .col-md-3:nth-child(even) {
@@ -116,6 +114,6 @@
 #info {
   color: black;
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 12px;
 }
