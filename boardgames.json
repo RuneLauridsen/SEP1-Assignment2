@@ -2,16 +2,16 @@
   "boardgames": {
     "boardgames": [
       {
-        "name": "XNew Ludo",
+        "name": "New Ludo",
         "imagePath": "images/newLudo.jpg",
         "numberOfPlayers": {
-          "min": 2,
-          "max": 6
+          "numberOfPlayersMin": 2,
+          "numberOfPlayersMax": 6
         },
         "category": "FAMILY",
         "isBought": true,
         "owner": {
-          "uid": "aac79350-22ca-4674-9608-f6c4c3de1c9f",
+          "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
           "name": "Bak",
           "studentId": "4321",
           "isMember": true,
@@ -22,7 +22,7 @@
           "loans": [
             {
               "student": {
-                "uid": "52b915bc-4a63-4606-afc6-3dddbfec06c6",
+                "uid": "a49ef503-5904-49b1-a2ca-e258806f6173",
                 "name": "Bob",
                 "studentId": "9999",
                 "isMember": true,
@@ -36,7 +36,29 @@
                   "year": 2022
                 },
                 "to": {
-                  "day": 31,
+                  "day": 12,
+                  "month": 12,
+                  "year": 2022
+                }
+              }
+            },
+            {
+              "student": {
+                "uid": "35096ef5-3863-431e-96d9-44be2fed839f",
+                "name": "Omar",
+                "studentId": "5678",
+                "isMember": true,
+                "phoneNumber": "11 11 11 11",
+                "email": "omar@gmail.com"
+              },
+              "interval": {
+                "from": {
+                  "day": 12,
+                  "month": 12,
+                  "year": 2022
+                },
+                "to": {
+                  "day": 19,
                   "month": 12,
                   "year": 2022
                 }
@@ -50,27 +72,10 @@
         "reviews": {
           "reviews": [
             {
-              "rating": 2,
-              "description": "Razy wejrzeniem runa rozbierać późniéj moje ramy. Lica pili uszy Mowy Białopiotrowiczowi mnie moki. Teraz ognia takie jedwabiem pewni spór ułaskawi znali samą chwytania zmniejsza brzeg. Ludu kuca Dano nasi Białopiotrowiczem swym. Czerwony gaju nasi budzące milcząc dniu gada zwijały puer zacz wozy. Czem kara Jest pali. Wybor Twarz Konia Białopiotrowiczowi stąd lekko smycz Może druki. Innem Gdzie wcale zaczerwienione Spór kilka roskrzyżował nieszczęście progi Nagle tobie. Cyfrę Trafia Róży Najpiękniejszego osobki wozów najpiękniejszéj Rzeczypospolitéj. Smuci Czyż Dojeżdżaczowi niepowiedziała skał gdzie mamę Dobre konno Przedstawiając.",
-              "student": {
-                "uid": "52b915bc-4a63-4606-afc6-3dddbfec06c6",
-                "name": "Bob",
-                "studentId": "9999",
-                "isMember": true,
-                "phoneNumber": "12 34 56 78",
-                "email": "bob@bobmail.dk"
-              },
-              "date": {
-                "day": 1,
-                "month": 1,
-                "year": 1000
-              }
-            },
-            {
               "rating": 5,
               "description": "Sina lapi on vaan pysy tein paha en. Se koetakaan kaksikaan ja kaantynyt. Ruuhen en toinen ai lausui. Ryyppasin pienoinen punastuen kalpeista on semmoisia me ikaankuin se. Kaupunkiin hartioilla sen ota tuo nelikoihin jai puheenaihe. Sanoo helga ai jo mikas joulu. Se pohjineen no kastettua majakoita ja jalkaansa ukkovaari menemista. Punastuen ai me no tervehtii huonoista teistakin. Hyvastinsa oli seinamalle lie voi tuommoinen. Sai vastannut vahintain nae osaamatta tuo oli. He paivalla et te ja tupaanne saavansa. Osata ole tuota ole saa kalaa summa. Saanut ai se ja takana toinen. Ethan he hassu kaksi ottaa minut olkaa se. Viitsi kay kas iso nakisi saaren. Menemista jalkaansa en noutamaan asiakseen jumalalta kovinkaan no.",
               "student": {
-                "uid": "52b915bc-4a63-4606-afc6-3dddbfec06c6",
+                "uid": "a49ef503-5904-49b1-a2ca-e258806f6173",
                 "name": "Bob",
                 "studentId": "9999",
                 "isMember": true,
@@ -87,7 +92,7 @@
               "rating": 4,
               "description": "Vin quitta ere durcis trotte centre bazars crosse ton. Cheval voyons non ebloui eux fronts uns peu appela. Claire sortes peu pentes devant eux. Cela uns doit deja trop pose vaut ans ils. Somptueux he puissions culbutent te detourner. Redoublait je et souffrance pressaient. Cavaliers succedent attachent petillent me firmament metairies au. Ruches il en clairs pleurs blemir ai. Derobe te labeur tempes regard la.",
               "student": {
-                "uid": "52b915bc-4a63-4606-afc6-3dddbfec06c6",
+                "uid": "a49ef503-5904-49b1-a2ca-e258806f6173",
                 "name": "Bob",
                 "studentId": "9999",
                 "isMember": true,
@@ -107,13 +112,13 @@
         "name": "Trivial Pursuit",
         "imagePath": "images/trivialPursuit.jpg",
         "numberOfPlayers": {
-          "min": 2,
-          "max": 6
+          "numberOfPlayersMin": 2,
+          "numberOfPlayersMax": 6
         },
         "category": "TRIVIA",
         "isBought": true,
         "owner": {
-          "uid": "ed2dec00-8418-4c16-b1ca-042baebca622",
+          "uid": "35096ef5-3863-431e-96d9-44be2fed839f",
           "name": "Omar",
           "studentId": "5678",
           "isMember": true,
@@ -134,13 +139,13 @@
         "name": "Uno",
         "imagePath": "images/uno.jpg",
         "numberOfPlayers": {
-          "min": 2,
-          "max": 10
+          "numberOfPlayersMin": 2,
+          "numberOfPlayersMax": 10
         },
         "category": "FAMILY",
         "isBought": false,
         "owner": {
-          "uid": "52b915bc-4a63-4606-afc6-3dddbfec06c6",
+          "uid": "a49ef503-5904-49b1-a2ca-e258806f6173",
           "name": "Bob",
           "studentId": "9999",
           "isMember": true,
@@ -156,13 +161,100 @@
         "reviews": {
           "reviews": []
         }
+      },
+      {
+        "name": "NYT_SPIL.mp4",
+        "imagePath": "/Users/bak/Downloads/SEP1 2/Resources/images/save.png",
+        "numberOfPlayers": {
+          "numberOfPlayersMin": 1,
+          "numberOfPlayersMax": 5
+        },
+        "category": "CARDS",
+        "isBought": true,
+        "owner": {
+          "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
+          "name": "Bak",
+          "studentId": "4321",
+          "isMember": true,
+          "phoneNumber": "88 88 88 88",
+          "email": "bak@gmail.com"
+        },
+        "loans": {
+          "loans": [
+            {
+              "student": {
+                "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
+                "name": "Bak",
+                "studentId": "4321",
+                "isMember": true,
+                "phoneNumber": "88 88 88 88",
+                "email": "bak@gmail.com"
+              },
+              "interval": {
+                "from": {
+                  "day": 11,
+                  "month": 12,
+                  "year": 2022
+                },
+                "to": {
+                  "day": 18,
+                  "month": 12,
+                  "year": 2022
+                }
+              }
+            }
+          ]
+        },
+        "votes": {
+          "votes": []
+        },
+        "reviews": {
+          "reviews": [
+            {
+              "rating": 5,
+              "description": "DAMN IS GOOD",
+              "student": {
+                "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
+                "name": "Bak",
+                "studentId": "4321",
+                "isMember": true,
+                "phoneNumber": "88 88 88 88",
+                "email": "bak@gmail.com"
+              },
+              "date": {
+                "day": 11,
+                "month": 12,
+                "year": 2022
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "GG",
+        "imagePath": "file:/Users/bak/Downloads/SEP1 2/Resources/images/uno.jpg",
+        "numberOfPlayers": {
+          "numberOfPlayersMin": 1,
+          "numberOfPlayersMax": 1
+        },
+        "category": "STRATEGY",
+        "isBought": false,
+        "loans": {
+          "loans": []
+        },
+        "votes": {
+          "votes": []
+        },
+        "reviews": {
+          "reviews": []
+        }
       }
     ]
   },
   "students": {
     "students": [
       {
-        "uid": "6affbf39-ca29-4ae6-9083-04059780344d",
+        "uid": "3fe7286c-b475-4155-88bd-6de9723ced5e",
         "name": "Simone",
         "studentId": "1234",
         "isMember": true,
@@ -170,7 +262,7 @@
         "email": "simone@gmail.com"
       },
       {
-        "uid": "ed2dec00-8418-4c16-b1ca-042baebca622",
+        "uid": "35096ef5-3863-431e-96d9-44be2fed839f",
         "name": "Omar",
         "studentId": "5678",
         "isMember": true,
@@ -178,7 +270,7 @@
         "email": "omar@gmail.com"
       },
       {
-        "uid": "aac79350-22ca-4674-9608-f6c4c3de1c9f",
+        "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
         "name": "Bak",
         "studentId": "4321",
         "isMember": true,
@@ -186,7 +278,7 @@
         "email": "bak@gmail.com"
       },
       {
-        "uid": "f08e832f-8c0d-4d84-959b-0c5aea7cdf67",
+        "uid": "8b8636d1-c3bb-4c70-9e5f-ca734d03728a",
         "name": "Rune",
         "studentId": "5678",
         "isMember": false,
@@ -194,17 +286,187 @@
         "email": "rune.lauridsen.2@gmail.com"
       },
       {
-        "uid": "52b915bc-4a63-4606-afc6-3dddbfec06c6",
+        "uid": "a49ef503-5904-49b1-a2ca-e258806f6173",
         "name": "Bob",
         "studentId": "9999",
         "isMember": true,
         "phoneNumber": "12 34 56 78",
         "email": "bob@bobmail.dk"
+      },
+      {
+        "uid": "20a16857-8d69-409b-944d-f129f7980651",
+        "name": "Per",
+        "studentId": "y78",
+        "isMember": true,
+        "phoneNumber": "78797",
+        "email": "fsefsef"
       }
     ]
   },
   "events": {
-    "events": []
+    "events": [
+      {
+        "uid": "fd92dc5b-d4ad-4ff4-b773-e7f1cd185372",
+        "participants": {
+          "students": [
+            {
+              "uid": "35096ef5-3863-431e-96d9-44be2fed839f",
+              "name": "Omar",
+              "studentId": "5678",
+              "isMember": true,
+              "phoneNumber": "11 11 11 11",
+              "email": "omar@gmail.com"
+            },
+            {
+              "uid": "3fe7286c-b475-4155-88bd-6de9723ced5e",
+              "name": "Simone",
+              "studentId": "1234",
+              "isMember": true,
+              "phoneNumber": "00 00 00 00",
+              "email": "simone@gmail.com"
+            },
+            {
+              "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
+              "name": "Bak",
+              "studentId": "4321",
+              "isMember": true,
+              "phoneNumber": "88 88 88 88",
+              "email": "bak@gmail.com"
+            },
+            {
+              "uid": "8b8636d1-c3bb-4c70-9e5f-ca734d03728a",
+              "name": "Rune",
+              "studentId": "5678",
+              "isMember": false,
+              "phoneNumber": "61 28 12 01",
+              "email": "rune.lauridsen.2@gmail.com"
+            }
+          ]
+        },
+        "stringDate": "13.12.2022 - 29.12.2022",
+        "name": "A",
+        "description": "A",
+        "link": "A",
+        "date": {
+          "from": {
+            "day": 13,
+            "month": 12,
+            "year": 2022
+          },
+          "to": {
+            "day": 29,
+            "month": 12,
+            "year": 2022
+          }
+        }
+      },
+      {
+        "uid": "bf1566d5-c346-493b-b472-f2335a4c350f",
+        "participants": {
+          "students": [
+            {
+              "uid": "3fe7286c-b475-4155-88bd-6de9723ced5e",
+              "name": "Simone",
+              "studentId": "1234",
+              "isMember": true,
+              "phoneNumber": "00 00 00 00",
+              "email": "simone@gmail.com"
+            },
+            {
+              "uid": "35096ef5-3863-431e-96d9-44be2fed839f",
+              "name": "Omar",
+              "studentId": "5678",
+              "isMember": true,
+              "phoneNumber": "11 11 11 11",
+              "email": "omar@gmail.com"
+            },
+            {
+              "uid": "5522a337-1f4e-43f9-9497-d16c97799c3c",
+              "name": "Bak",
+              "studentId": "4321",
+              "isMember": true,
+              "phoneNumber": "88 88 88 88",
+              "email": "bak@gmail.com"
+            },
+            {
+              "uid": "8b8636d1-c3bb-4c70-9e5f-ca734d03728a",
+              "name": "Rune",
+              "studentId": "5678",
+              "isMember": false,
+              "phoneNumber": "61 28 12 01",
+              "email": "rune.lauridsen.2@gmail.com"
+            },
+            {
+              "uid": "a49ef503-5904-49b1-a2ca-e258806f6173",
+              "name": "Bob",
+              "studentId": "9999",
+              "isMember": true,
+              "phoneNumber": "12 34 56 78",
+              "email": "bob@bobmail.dk"
+            },
+            {
+              "uid": "20a16857-8d69-409b-944d-f129f7980651",
+              "name": "Per",
+              "studentId": "y78",
+              "isMember": true,
+              "phoneNumber": "78797",
+              "email": "fsefsef"
+            }
+          ]
+        },
+        "stringDate": "15.12.2022 - 06.01.2023",
+        "name": "BB",
+        "description": "AA",
+        "link": "CC",
+        "date": {
+          "from": {
+            "day": 15,
+            "month": 12,
+            "year": 2022
+          },
+          "to": {
+            "day": 6,
+            "month": 1,
+            "year": 2023
+          }
+        }
+      },
+      {
+        "uid": "8ba61171-5890-477d-96dd-23e783e95de0",
+        "participants": {
+          "students": [
+            {
+              "uid": "3fe7286c-b475-4155-88bd-6de9723ced5e",
+              "name": "Simone",
+              "studentId": "1234",
+              "isMember": true,
+              "phoneNumber": "00 00 00 00",
+              "email": "simone@gmail.com"
+            }
+          ]
+        },
+        "stringDate": "16.12.2022 - 16.12.2022",
+        "name": "a",
+        "description": "b",
+        "link": "c",
+        "date": {
+          "from": {
+            "day": 16,
+            "month": 12,
+            "year": 2022
+          },
+          "to": {
+            "day": 16,
+            "month": 12,
+            "year": 2022
+          }
+        }
+      }
+    ]
   },
-  "contactInformation": {}
+  "contactInformation": {
+    "name": "Bob",
+    "email": "BobsEmail@mail.com",
+    "phone": "+45 40 50 60 70"
+  }
 }

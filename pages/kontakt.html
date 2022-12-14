@@ -31,7 +31,8 @@
           <nav class="navbar navbar-expand-md">
             <!-- In md view, we set flex-column, since menu items 
               should be stacked vertically in vertical navbar -->
-            <div class="container-fluid flex-md-column align-items-md-start ms-2">
+            <div class="container-fluid flex-md-column align-items-md-start
+              ms-2">
               <p class="navbar-brand mb-md-0">Menu</p>
               <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#vert-navbar">
@@ -42,7 +43,8 @@
                   <li><a class="nav-link" href="index.html">Forside</a></li>
                   <li>
                     <!-- Simplified code for submenu from https://dev.to/codeply/bootstrap-5-sidebar-examples-38pb: -->
-                    <a class="nav-link" href="#vert-navbar-sub" data-bs-toggle="collapse">Brætspil</a>
+                    <a class="nav-link" href="#vert-navbar-sub"
+                      data-bs-toggle="collapse">Brætspil</a>
                     <ul class="collapse navbar-nav flex-column ms-md-2"
                       id="vert-navbar-sub">
                       <li><a href="braetspil.html" class="nav-link">Alle</a></li>
@@ -62,20 +64,38 @@
 
         <div class="col">
           <div class="container">
-            <div class="row">
-              <div class="container">
-                <div id="info">
-                  <h1>KONTAKT</h1>
-                  <p class="lead"> Kontakt os, hvis du har spørgsmål eller brug for hjælp.</p>
-                  <hr>
-                  <p class="lead">Ring til os eller send en e-mail:</p>
-                  <hr>
-                  <p class="lead"><a href="mailto:313599@via.dk">Send os en e-mail</a></p>
-                  <p class="lead">Eller ring på : <a href="tel:+457168189">71 68 18 90</a></p>
-                </div>
+            <div class="container">
+              <div id="info">
+                <h1>KONTAKT</h1>
+                <p class="lead"> Kontakt os, hvis du har spørgsmål eller brug
+                  for hjælp.</p>
+                <hr>
+                <p class="lead">Ring til os eller send en e-mail:</p>
+                <hr>
+                <p class="lead"><a href="mailto:313599@via.dk">Send os en
+                    e-mail</a></p>
+                <p class="lead">Eller ring på : <a href="tel:+457168189">+45
+                    88 88 88 88</a></p>
               </div>
+            </div>
+            <div class="row" id="ceo-contact">
               <div class="col-md-2">
-                <img class="img-fluid" src="../images/kontakt/Omar.png" alt="Oumar ">
+                <img class="img-fluid" src="../images/kontakt/MotoMoto.jpeg"
+                  alt="Rune ">
+              </div>
+              <div id="contact-name" class="col-md-2">Moto Moto</div>
+              <div id="contact-role" class="col-md-2">CEO</div>
+              <div id="contact-boardgame" class="col-md-2">GoBang</div>
+              <div class="col-md-2">
+                <p>Mail: <a id="contact-email" href="mailto:BobRoss@yes.dk">BobRoss@yes.dk</a></p>
+                <p>Telefon: <i id="contact-phone">123</i></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-2">
+                <img class="img-fluid" src="../images/kontakt/Omar.png"
+                  alt="Oumar ">
               </div>
               <div class="col-md-2">Navn: Oumar Ammar</div>
               <div class="col-md-2">Role: Webudvikler</div>
@@ -84,10 +104,12 @@
                 <p>Mail: <a href="mailto:313599@via.dk">313599@via.dk</a></p>
               </div>
             </div>
+
             <hr>
             <div class="row">
               <div class="col-md-2">
-                <img class="img-fluid" src="../images/kontakt/Rune.png" alt="Rune ">
+                <img class="img-fluid" src="../images/kontakt/Rune.png"
+                  alt="Rune ">
               </div>
               <div class="col-md-2">Navn : Rune Lauridsen</div>
               <div class="col-md-2">Role: Webudvikler</div>
@@ -99,7 +121,8 @@
             <hr>
             <div class="row">
               <div class="col-md-2">
-                <img class="img-fluid" src="../images/kontakt/Bak.png" alt="Sebastian ">
+                <img class="img-fluid" src="../images/kontakt/Bak.png"
+                  alt="Sebastian ">
               </div>
               <div class="col-md-2">Navn : Sebastian Cedbak Bak</div>
               <div class="col-md-2">Role: Webudvikler</div>
@@ -111,7 +134,8 @@
             <hr>
             <div class="row">
               <div class="col-md-2">
-                <img class="img-fluid" src="../images/kontakt/Simone.png" alt="Simone ">
+                <img class="img-fluid" src="../images/kontakt/Simone.png"
+                  alt="Simone ">
               </div>
               <div class="col-md-2">Navn : Simone Storm Bøgh Kristensen</div>
               <div class="col-md-2">Role: Webudvikler</div>
@@ -124,5 +148,7 @@
         </div>
       </div>
     </div>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/load_contact.js"></script>
   </body>
 </html>
