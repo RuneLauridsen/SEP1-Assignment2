@@ -6,13 +6,22 @@
   background-color: #ffe0aa;
 }
 
+/* 768px = Bootstrap md breakpoint */
+@media only screen and (min-width: 768px) {
+  #vert-navbar-container {
+    /* 100px is height of horizontal navbar. 
+       Vertical navbar should take up remaining vertical space*/
+    min-height: calc(100vh - 100px);
+  }
+}
+
 #vert-navbar-sub {
   font-size: 0.9em;
 }
 
 #hori-navbar {
   background-color: #f6a61d;
-  height: 10vh;
+  height: 100px;
 }
 
 #hori-navbar-logo {
@@ -62,12 +71,14 @@
   font-size: 0.8em;
 }
 
+.card-text-rating {
+  text-align: center;
+}
+
 /* Styling for events.html */
 #events-container {
   background-image: url(../images/boardgame_pieces.jpeg);
   background-size: cover;
-  height: 90vh;
-  overflow-y: auto;
 }
 
 #events-container form * {
